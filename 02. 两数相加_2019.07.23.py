@@ -28,35 +28,34 @@ class Solution(object):
         :type l2: ListNode
         :rtype: ListNode
         """
-        headNode = ListNode(0)
-        result = headNode
-        carry = 0
-        l1Value = 0
-        l2Value = 0
+        # 考察链表使用，注意进位和最后进位的情况，
+        # 执行用时 :
+        # 64 ms, 在所有 Python 提交中击败了72.39%的用户
+        # 内存消耗 :
+        # 11.8 MB, 在所有 Python 提交中击败了29.57%的用户
+        dummyHead = ListNode(0) # 哑节点
+        result = dummyHead
+        carry = 0 # 作为上一次相加是否需要进1的依据
         while l1 or l2:
             # 这里多判断了很多次l1和l2是否为空
+            s = 0
             if l1:
-                l1Value = l1.val
+                s += l1.val
                 l1 = l1.next
-            else:
-                l1Value = 0
 
             if l2:
-                l2Value = l2.val
+                s += l2.val
                 l2 = l2.next
-            else:
-                l2Value = 0
 
-            sum = l1Value + l2Value + carry
-            carry = int(sum * 0.1)
-            result.next = ListNode(sum % 10)
-
+            s += carry
+            carry = s // 10
+            result.next = ListNode(s % 10)
             result = result.next
 
         # 如果进位了要再输出一位
-        if carry >= 1:
+        if carry > 0:
             result.next = ListNode(carry)
-        return headNode.next
+        return dummyHead.next
 
 
 if __name__ == '__main__':

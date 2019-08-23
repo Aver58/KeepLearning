@@ -24,27 +24,29 @@ class Solution(object):
         if not nums:
             return
         """
-        方法一、暴力解法： -- 5s
+        # 方法一、暴力解法：
+        # 复杂度分析：时间复杂度：O(n^2)空间复杂度：O(1) -- 5s
         length = len(nums)
         for i in range(length):
             for j in range(i + 1, length):
                 if nums[i] + nums[j] == target:
                     return [i, j]
+                    
+        # 方法二：利用python切片。 其实原理跟2次遍历一样
+        # 解题关键主要是想找到 num2 = target - num1，是否也在list中，- 1s
+        for i in range(len(nums)):
+            if target-nums[i] in nums[i+1:]:
+                return [i, nums.index(target-nums[i], i+1)]
         """
 
-        # 方法二、直接哈希记录需要的key，遍历到就是找到需要的值： -- 80ms
+        # 方法三、直接哈希记录需要的key，遍历到就是找到需要的值： -- 80ms
+        # 复杂度分析：时间复杂度：O(n)空间复杂度：O(n)
         dic = {}
         for i, num in enumerate(nums):
             if num in dic:
                 return [dic[num], i]
             else:
                 dic[target - num] = i
-        """
-        # 方法三：利用python切片。 -- 1s
-        for i in range(len(nums)):
-            if target-nums[i] in nums[i+1:]:
-                return [i, nums.index(target-nums[i], i+1)]
-        """
 
 
 if __name__ == '__main__':
