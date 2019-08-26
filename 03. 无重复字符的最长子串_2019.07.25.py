@@ -28,10 +28,14 @@ class Solution(object):
         """
         if not s:
             return 0
+        # 1. 暴力法
+        # 复杂度分析：时间复杂度：O(n^3)空间复杂度：O(1)
+
+        # 3. 滑动窗口，如果字符重复，将窗口向右移动一格就能不重复了！！！
+        # 复杂度分析：时间复杂度：O(n)空间复杂度：O(n)
+        # https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/hua-jie-suan-fa-3-wu-zhong-fu-zi-fu-de-zui-chang-z/
         st = {}
         i, ans = 0, 0
-        # 滑动窗口，如果字符重复，将窗口向右移动一格就能不重复了！！！
-        # https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/hua-jie-suan-fa-3-wu-zhong-fu-zi-fu-de-zui-chang-z/
         for j in range(len(s)):
             if s[j] in st:
                 i = max(st[s[j]] + 1, i)
