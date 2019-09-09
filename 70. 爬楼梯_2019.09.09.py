@@ -34,18 +34,18 @@ class Solution(object):
         :rtype: int
         """
         # 1. 斐波那契数 28 ms 29.70%
-        # if n == 0:
-        #     return 0
-        # elif n == 1:
-        #     return 1
-        # else:
-        #     first = 1
-        #     second = 2
-        #     for i in range(2, n):
-        #         third = first + second
-        #         first = second
-        #         second = third
-        #     return second
+        if n == 0:
+            return 0
+        elif n == 1:
+            return 1
+        else:
+            first = 1
+            second = 2
+            for i in range(2, n):
+                third = first + second
+                first = second
+                second = third
+            return second
 
         # 2. 第一名 20 ms 77.84%
         # if n == 1:
@@ -60,7 +60,18 @@ class Solution(object):
         #     f.append(f[i-1]+f[i-2])
         # return f[-1]
 
-        # 3.
+        # 3.暴力法，把所有的结果都分解成 跨1步 + 跨2步
+        # 时间复杂度：O(2^n) 空间复杂度：O(n)
+        # def _claimStairs(cur, n):
+        #     if cur > n :
+        #         return 0
+        #     if cur == n:
+        #         return 1
+        #
+        #     return _claimStairs(cur + 1, n) + _claimStairs(cur + 2, n)
+        #
+        # return _claimStairs(0, n)
+
 
 if __name__ == '__main__':
     target = 5
