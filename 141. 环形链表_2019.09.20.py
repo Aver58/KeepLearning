@@ -42,31 +42,49 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
-        # 方法一：哈希表
+        # 方法一：哈希表 空间复杂度O(n)
         # 我们遍历所有结点并在哈希表中存储每个结点的引用（或内存地址）。
         # 如果当前结点为空结点 null（即已检测到链表尾部的下一个结点），那么我们已经遍历完整个链表，并且该链表不是环形链表。
         # 如果当前结点的引用已经存在于哈希表中，那么返回 true（即该链表为环形链表）。
-        
+        lookup = set()
+        p = head
+        while p:
+            lookup.add(p)
+            if p.next in lookup:
+                return True
+            p = p.next
+        return False
+
+        # 思路二: 快慢指针, 空间复杂度O(1) 48 ms 73%
+        # 快指针走2步，慢指针走一步
+        # 好像两个人在一个操场上跑步,速度快的人一定会和速度慢的相遇(环)
+        # https://leetcode-cn.com/problems/linked-list-cycle/solution/dong-hua-shi-yong-kuai-man-zhi-zhen-qiu-jie-huan-x/
+        # slow = head
+        # fast = head
+        # while fast and fast.next:
+        #     slow = slow.next
+        #     fast = fast.next.next
+        #     if slow == fast:
+        #         return True
+        # return False
 
 
 if __name__ == '__main__':
-    # target = [1,2,2,3,4,4,3]
     head = TreeNode(1)
 
     head1 = TreeNode(2)
-    head1.left = TreeNode(3)
-    head1.right = TreeNode(4)
+    head1.next = head
+    # head1.left = TreeNode(3)
+    # head1.right = TreeNode(4)
 
-    head3 = TreeNode(2)
-    head3.left = TreeNode(4)
-    head3.right = TreeNode(3)
+    # head3 = TreeNode(2)
+    # head3.left = TreeNode(4)
+    # head3.right = TreeNode(3)
 
-    head2 = TreeNode(2)
-    head2.left = head3
-    head2.right = TreeNode(3)
+    # head2 = TreeNode(2)
+    # head2.left = head3
+    # head2.right = TreeNode(3)
 
-    head.left = head1
-    head.right = head2
-
-    pos = -1
+    head.next = head1
+    # head.right = head2
     print(Solution().hasCycle(head))
