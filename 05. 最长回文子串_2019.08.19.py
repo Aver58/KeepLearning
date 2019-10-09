@@ -26,15 +26,18 @@ class Solution(object):
         """
         if s is None or s == '':
             return s
-        longest = ''
         # 1. 暴力解法：时间复杂度：O(n^3)空间复杂度：O(1)
+        # longest = ''
         # for i in range(len(s)):
         #     for j in range(i + 1, len(s)):
         #         str = s[i:j]
         #         if str == str[::-1] and len(str) > len(longest):
         #             longest = str
         # return longest
+
         # 2. 动态规划
+        # 结合53题 把这题拆成最长子串和回文两个问题
+        sum = nums[0]
 
 
 
