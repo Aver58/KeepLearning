@@ -54,14 +54,97 @@ public:
 		std::cout << _437_Path_Sum_III::pathSum(head,8);
 	}
 
-	static int pathSum(TreeNode* root, int sum) {
-		// 1. 层序遍历(借助栈)
-		// 2. 回溯pathSum(TreeNode* root, int sum,int curSum)
-		int count = 0;
-		if (root == NULL)
+	static int pathSum(TreeNode* root, int sum, int curSum)
+	{
+		if (root == nullptr)
 		{
 			return 0;
 		}
+		int count = 0;
+		curSum += root->val;
+		if (sum == curSum)
+		{
+			count += 1;
+		}
+		if (root->left != nullptr)
+		{
+			count += pathSum(root->left, sum, curSum);
+		}
+		if (root->right != nullptr)
+		{
+			count += pathSum(root->right, sum, curSum);
+		}
+		return count;
 	}
+
+	static int pathSum(TreeNode* root, int sum) {
+		// 1. 层序遍历(借助队列)  递归所有情况 40ms 57%
+		//回溯pathSum(TreeNode* root, int sum,int curSum)
+		if (root == nullptr) {
+			return 0;
+		}
+		queue<TreeNode*> qt;
+		qt.push(root);
+		int res = 0;
+		while (!qt.empty())
+		{
+			TreeNode *node = qt.front();
+			res += pathSum(node, sum, 0);
+			qt.pop();
+
+			if (node->left != nullptr)
+			{
+				qt.push(node->left);
+			}
+			if (node->right != nullptr)
+			{
+				qt.push(node->right);
+			}
+		}
+		return res;
+	}
+
+	//2. 用map记录结果，每个结点都遍历一遍map 看不懂
+	//static unordered_map<int, int> m;
+
+	//static int get(int v) {
+	//	unordered_map<int, int>::iterator it = m.find(v);
+	//	if (it == m.end())return 0;
+	//	else return it->second;
+	//}
+
+	//static void pathSumHelper(TreeNode* root, int target, int* ret, int sum) {
+	//	int nowSum = sum + root->val;
+
+	//	int count = get(nowSum - target);
+	//	*ret += count;
+
+	//	if (!root->left && !root->right) {
+
+	//	}
+	//	else {
+	//		int t = get(nowSum);
+	//		m[nowSum] = t + 1;
+
+	//		if (root->left) {
+	//			pathSumHelper(root->left, target, ret, nowSum);
+	//		}
+	//		m[nowSum] = t + 1;
+	//		if (root->right) {
+	//			pathSumHelper(root->right, target, ret, nowSum);
+	//		}
+
+	//		m[nowSum] = t;
+	//	}
+	//}
+
+	//static int pathSum(TreeNode* root, int sum) {
+	//	if (root == NULL)return 0;
+	//	m.clear();
+	//	m[0] = 1;
+	//	int ret = 0;
+	//	pathSumHelper(root, sum, &ret, 0);
+	//	return ret;
+	//}
 };
 

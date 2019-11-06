@@ -75,6 +75,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -106,6 +108,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <EnablePREfast>true</EnablePREfast>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -154,9 +157,14 @@
     <ClInclude Include="Global.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="SortFunc.h" />
     <ClInclude Include="_234_PalindromeLinkedList.h" />
     <ClInclude Include="_283_MoveZeroes.h" />
+    <ClInclude Include="_34_Find_First_and_Last_Position_of_Element_in_Sorted_Array.h" />
+    <ClInclude Include="_35_Search_Insert_Position.h" />
     <ClInclude Include="_437_Path_Sum_III.h" />
+    <ClInclude Include="_448_Find_All_Numbers_Disappeared_in_an_Array.h" />
+    <ClInclude Include="_461_Hamming_Distance.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Global.cpp" />

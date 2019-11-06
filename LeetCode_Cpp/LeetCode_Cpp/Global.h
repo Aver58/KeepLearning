@@ -2,7 +2,10 @@
 
 using namespace std;
 #include<vector>
+#include<queue>
 #include<list>
+#include <math.h>
+//#include <unordered_map>
 #include <iostream>
 
 class Global
@@ -14,7 +17,7 @@ public:
 
 //* Definition for singly-linked list.
 
-extern struct ListNode {
+struct ListNode {
 	int val;
 	ListNode *next;
 	ListNode(int x) : val(x), next(nullptr) {}

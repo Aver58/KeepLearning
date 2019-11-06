@@ -33,6 +33,21 @@
     <ClInclude Include="_437_Path_Sum_III.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_448_Find_All_Numbers_Disappeared_in_an_Array.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_35_Search_Insert_Position.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_461_Hamming_Distance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_34_Find_First_and_Last_Position_of_Element_in_Sorted_Array.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SortFunc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
