@@ -6,7 +6,9 @@
 #include <iostream>
 #include "_34_Find_First_and_Last_Position_of_Element_in_Sorted_Array.h"
 #include "_35_Search_Insert_Position.h"
+#include "_39_Combination_Sum.h"
 #include "_234_PalindromeLinkedList.h"
+#include "_278_First_Bad_Version.h"
 #include "_283_MoveZeroes.h"
 #include "_437_Path_Sum_III.h"
 #include "_448_Find_All_Numbers_Disappeared_in_an_Array.h"
@@ -24,7 +26,9 @@ int main()
 	//_448_Find_All_Numbers_Disappeared_in_an_Array::Test();
 	//_461_Hamming_Distance::Test();
 	//_34_Find_First_and_Last_Position_of_Element_in_Sorted_Array::Test();
-	SortFunc::Test();
+	//_278_First_Bad_Version::Test();
+	_39_Combination_Sum().Test();
+	//SortTest();
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

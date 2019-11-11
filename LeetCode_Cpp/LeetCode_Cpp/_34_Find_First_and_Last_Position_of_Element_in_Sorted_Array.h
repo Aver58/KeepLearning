@@ -112,7 +112,7 @@ public:
 
 	// https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution/er-fen-cha-zhao-suan-fa-xi-jie-xiang-jie-by-labula/
 	static vector<int> searchRange(vector<int>& nums, int target) {
-		//1. 二分法
+		//1. 二分法 8 ms 93%
 		vector<int> targetRange = { -1, -1 };
 
 		int leftIdx = extremeInsertionIndex(nums, target, true);

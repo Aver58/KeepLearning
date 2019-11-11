@@ -48,15 +48,24 @@
     <ClInclude Include="SortFunc.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_278_First_Bad_Version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_374_Guess_Number_Higher_or_Lower.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_375_Guess_Number_Higher_or_LowerII.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_39_Combination_Sum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="LeetCode_Cpp.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Global.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

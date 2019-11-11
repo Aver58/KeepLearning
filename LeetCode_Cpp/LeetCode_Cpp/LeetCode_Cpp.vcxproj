@@ -159,15 +159,18 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="SortFunc.h" />
     <ClInclude Include="_234_PalindromeLinkedList.h" />
+    <ClInclude Include="_278_First_Bad_Version.h" />
     <ClInclude Include="_283_MoveZeroes.h" />
     <ClInclude Include="_34_Find_First_and_Last_Position_of_Element_in_Sorted_Array.h" />
     <ClInclude Include="_35_Search_Insert_Position.h" />
+    <ClInclude Include="_374_Guess_Number_Higher_or_Lower.h" />
+    <ClInclude Include="_375_Guess_Number_Higher_or_LowerII.h" />
+    <ClInclude Include="_39_Combination_Sum.h" />
     <ClInclude Include="_437_Path_Sum_III.h" />
     <ClInclude Include="_448_Find_All_Numbers_Disappeared_in_an_Array.h" />
     <ClInclude Include="_461_Hamming_Distance.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Global.cpp" />
     <ClCompile Include="LeetCode_Cpp.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
