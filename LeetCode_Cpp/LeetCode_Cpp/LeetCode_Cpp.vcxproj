@@ -154,6 +154,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="_216_Combination_Sum_III.h" />
+    <ClInclude Include="_377_Combination_Sum_IV.h" />
+    <ClInclude Include="_40_Combination_Sum_II.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="resource.h" />
@@ -169,6 +172,7 @@
     <ClInclude Include="_437_Path_Sum_III.h" />
     <ClInclude Include="_448_Find_All_Numbers_Disappeared_in_an_Array.h" />
     <ClInclude Include="_461_Hamming_Distance.h" />
+    <ClInclude Include="_49_Group_Anagrams.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LeetCode_Cpp.cpp" />

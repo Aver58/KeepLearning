@@ -7,9 +7,12 @@
 #include "_34_Find_First_and_Last_Position_of_Element_in_Sorted_Array.h"
 #include "_35_Search_Insert_Position.h"
 #include "_39_Combination_Sum.h"
+#include "_40_Combination_Sum_II.h"
+#include "_216_Combination_Sum_III.h"
 #include "_234_PalindromeLinkedList.h"
 #include "_278_First_Bad_Version.h"
 #include "_283_MoveZeroes.h"
+#include "_377_Combination_Sum_IV.h"
 #include "_437_Path_Sum_III.h"
 #include "_448_Find_All_Numbers_Disappeared_in_an_Array.h"
 #include "_461_Hamming_Distance.h"
@@ -27,7 +30,10 @@ int main()
 	//_461_Hamming_Distance::Test();
 	//_34_Find_First_and_Last_Position_of_Element_in_Sorted_Array::Test();
 	//_278_First_Bad_Version::Test();
-	_39_Combination_Sum().Test();
+	//_39_Combination_Sum().Test();
+	//_40_Combination_Sum_II().Test();
+	//_216_Combination_Sum_III().Test();
+	_377_Combination_Sum_IV().Test();
 	//SortTest();
 }
 

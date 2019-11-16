@@ -60,6 +60,18 @@
     <ClInclude Include="_39_Combination_Sum.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_40_Combination_Sum_II.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_216_Combination_Sum_III.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_377_Combination_Sum_IV.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_49_Group_Anagrams.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
