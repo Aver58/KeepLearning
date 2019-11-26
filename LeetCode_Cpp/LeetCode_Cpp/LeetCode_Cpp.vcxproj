@@ -154,7 +154,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="unity_test.h" />
+    <ClInclude Include="_1_Two_Sum.h" />
     <ClInclude Include="_216_Combination_Sum_III.h" />
+    <ClInclude Include="_2_Add_Two_Numbers.h" />
     <ClInclude Include="_377_Combination_Sum_IV.h" />
     <ClInclude Include="_40_Combination_Sum_II.h" />
     <ClInclude Include="Global.h" />

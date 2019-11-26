@@ -53,7 +53,7 @@ public:
 		//return n;
 
 		//2. ¶þ·Ö·¨ 4 ms 97%
-		int n = nums.size();
+		size_t n = nums.size();
 		if (n <= 0)
 			return 0;
 

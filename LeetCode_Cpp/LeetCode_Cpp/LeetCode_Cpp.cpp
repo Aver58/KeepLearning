@@ -4,6 +4,7 @@
 #include "Global.h"
 #include "pch.h"
 #include <iostream>
+#include "_1_Two_Sum.h"
 #include "_34_Find_First_and_Last_Position_of_Element_in_Sorted_Array.h"
 #include "_35_Search_Insert_Position.h"
 #include "_39_Combination_Sum.h"
@@ -22,6 +23,7 @@ int main()
 {
     std::cout << "Hello World!\n"; 
 	
+	_1_Two_Sum().Test();
 	//_234_PalindromeLinkedList::Test();
 	//_283_MoveZeroes::Test();
 	//_35_Search_Insert_Position::Test();
@@ -33,7 +35,7 @@ int main()
 	//_39_Combination_Sum().Test();
 	//_40_Combination_Sum_II().Test();
 	//_216_Combination_Sum_III().Test();
-	_377_Combination_Sum_IV().Test();
+	//_377_Combination_Sum_IV().Test();
 	//SortTest();
 }
 

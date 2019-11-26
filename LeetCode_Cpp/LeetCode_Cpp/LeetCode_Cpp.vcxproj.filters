@@ -72,6 +72,15 @@
     <ClInclude Include="_49_Group_Anagrams.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="unity_test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_1_Two_Sum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_2_Add_Two_Numbers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
