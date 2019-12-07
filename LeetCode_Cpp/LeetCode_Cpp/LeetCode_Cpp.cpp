@@ -17,13 +17,19 @@
 #include "_437_Path_Sum_III.h"
 #include "_448_Find_All_Numbers_Disappeared_in_an_Array.h"
 #include "_461_Hamming_Distance.h"
+#include "_242_Valid_Anagram.h"
+#include "_25_Reverse_Nodes_in_k_Group.h"
+#include "_739_Daily_Temperatures.h"
+#include "_20_Valid_Parentheses.h"
+#include "_239_Sliding_Window_Maximum.h"
+#include "_230_Kth_Smallest_Element_in_a_BST.h"
 #include "SortFunc.h"
 
 int main()
 {
     std::cout << "Hello World!\n"; 
 	
-	_1_Two_Sum().Test();
+	//_1_Two_Sum().Test();
 	//_234_PalindromeLinkedList::Test();
 	//_283_MoveZeroes::Test();
 	//_35_Search_Insert_Position::Test();
@@ -36,7 +42,13 @@ int main()
 	//_40_Combination_Sum_II().Test();
 	//_216_Combination_Sum_III().Test();
 	//_377_Combination_Sum_IV().Test();
-	//SortTest();
+	//_242_Valid_Anagram().Test();
+	//_25_Reverse_Nodes_in_k_Group().Test();
+	//_739_Daily_Temperatures().Test();
+	//_20_Valid_Parentheses().Test();
+	//_239_Sliding_Window_Maximum().Test();
+	//_230_Kth_Smallest_Element_in_a_BST().Test();
+	SortTest();
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

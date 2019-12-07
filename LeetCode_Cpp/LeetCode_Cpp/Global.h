@@ -3,11 +3,14 @@
 using namespace std;
 #include<vector>
 #include<queue>
+#include<deque>
+#include<stack>
 #include<list>
 #include <math.h>
-//#include <unordered_map>
+#include <unordered_map>
 #include <iostream>
 #include <map>  
+#include <algorithm>  
 //* Definition for singly-linked list.
 struct ListNode {
 	int val;

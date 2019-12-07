@@ -156,16 +156,48 @@ void MergeSort(T* nums,int left, int right, T* temp) {
 	}
 }
 
+//6. 桶排序
+//遍历一遍把出现的次数用map记录下来，然后遍历输出
+void BucketSort(int nums[], int len) {
+	map<int, int> map1;
+	for (size_t i = 0; i < len; i++)
+	{
+		if (map1.find(nums[i])!=map1.end())
+		{
+			map1[nums[i]] += 1;
+		}
+		else
+		{
+			map1[nums[i]] = 1;
+		}
+	}
+
+	int i = 0;
+	for(auto item : map1)
+	{
+		if (item.second !=0)
+		{
+			while (item.second > 0)
+			{
+				nums[i++] = item.first;
+				item.second--;
+			}
+		}
+	}
+}
+
 static void SortTest() {
-	int head[7] = { 2,3,4,6,8,7,0};
+	int head[8] = {2,3,4,6,8,7,0,0};
 	//vector<int> head1 = vector<int>{ 2,3,4,5,8,7,0};
-	int* head2 = head;
 	int* temp = new int[20];
-	MergeSort(head2,0,6, temp);
+	//MergeSort(head2,0,6, temp);
+	BucketSort(head,8);
+	int* head2 = head;
+
 	//merge_sort(head,6);
 	//Dump(head1, GetArrayLen(head1));
 	//int i = 0;
-	for (size_t i = 0; i < 7; i++)
+	for (size_t i = 0; i < 8; i++)
 	{
 		cout << *head2++;
 	}
