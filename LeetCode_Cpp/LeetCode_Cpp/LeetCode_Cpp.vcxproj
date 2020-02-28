@@ -155,8 +155,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="unity_test.h" />
+    <ClInclude Include="_147_Insertion_Sort_List.h" />
     <ClInclude Include="_1_Two_Sum.h" />
     <ClInclude Include="_20_Valid_Parentheses.h" />
+    <ClInclude Include="_215_Kth_Largest_Element_in_an_Array.h" />
     <ClInclude Include="_216_Combination_Sum_III.h" />
     <ClInclude Include="_230_Kth_Smallest_Element_in_a_BST.h" />
     <ClInclude Include="_239_Sliding_Window_Maximum.h" />

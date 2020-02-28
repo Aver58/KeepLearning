@@ -23,6 +23,8 @@
 #include "_20_Valid_Parentheses.h"
 #include "_239_Sliding_Window_Maximum.h"
 #include "_230_Kth_Smallest_Element_in_a_BST.h"
+#include "_147_Insertion_Sort_List.h"
+#include "_215_Kth_Largest_Element_in_an_Array.h"
 #include "SortFunc.h"
 
 int main()
@@ -48,7 +50,9 @@ int main()
 	//_20_Valid_Parentheses().Test();
 	//_239_Sliding_Window_Maximum().Test();
 	//_230_Kth_Smallest_Element_in_a_BST().Test();
-	SortTest();
+	//_147_Insertion_Sort_List().Test();
+	_215_Kth_Largest_Element_in_an_Array().Test();
+	//SortTest();
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

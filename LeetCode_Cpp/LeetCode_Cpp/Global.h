@@ -11,6 +11,8 @@ using namespace std;
 #include <iostream>
 #include <map>  
 #include <algorithm>  
+#include <cstring>
+
 //* Definition for singly-linked list.
 struct ListNode {
 	int val;

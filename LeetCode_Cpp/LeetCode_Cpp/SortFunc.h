@@ -123,36 +123,52 @@ void QuickSort(int nums[], int left, int right)
 
 //将有二个有序数列a[first...mid]和a[mid...last]合并。
 template<typename T>
-void _MergeArray(T* nums, int left,int mid, int right, T* temp) {
-	// 左半段： [left,mid) 右半段： [mid + 1,right) 都是有序的
+void _MergeArray(T* nums, int left,int mid, int right) {
+	// 左半段： [left,mid) 
+	// 右半段： [mid + 1,right)
+	// 都是有序的
 	int i = left;
 	int j = mid + 1; 
-	int t = 0;		//临时数组指针
-	// 双指针同时比较左半段和右半段，排序2个片段
-	while (i <= mid && j <= right)
-		temp[t++] = nums[i] <= nums[j] ? nums[i++]: nums[j++];
 
-	//将左边剩余元素填充进temp中
-	while (i <= mid)
-		temp[t++] = nums[i++];
-	//将右序列剩余元素填充进temp中
-	while (j <= right)
-		temp[t++] = nums[j++];
+	int length = right - left;
+	T* temp = new T[length];
+
+	//临时数组指针k : 表明从什么位置开始修改数组
+	int k = 0;
+	while (k <= length)
+	{
+		//总共就3种情况：
+		if (i > mid)
+		{
+			//①左边处理完了，把已排序的右边填入数组
+			temp[k++] = nums[j++];
+		}
+		else if (j > right)
+		{
+			//②右边处理完了，把已排序的左边填入数组
+			temp[k++] = nums[i++];
+		}
+		else
+		{
+			//③双指针比对大小，小的填入数组
+			temp[k++] = nums[i] < nums[j] ? nums[i++]: nums[j++];
+		}
+	}
 
 	// 将temp塞入数组的[left,right)位置
-	t = 0;
+	k = 0;
 	while (left <= right)
-		nums[left++] = temp[t++];
+		nums[left++] = temp[k++];
 }
 
 template<typename T>
-void MergeSort(T* nums,int left, int right, T* temp) {
+void MergeSort(T* nums,int left, int right) {
 	if (left < right)
 	{
-		int mid = left + (right - left) / 2;			//避免溢出int
-		MergeSort(nums, left, mid, temp);				//对左边进行排序
-		MergeSort(nums, mid + 1, right, temp);			//对右边进行排序
-		_MergeArray(nums, left, mid, right, temp);		//把排序好的数据合并
+		int mid = left + (right - left) / 2;	//避免int溢出
+		MergeSort(nums, left, mid);				//对左边进行排序
+		MergeSort(nums, mid + 1, right);		//对右边进行排序
+		_MergeArray(nums, left, mid, right);	//把排序好的数据合并
 	}
 }
 
@@ -187,11 +203,10 @@ void BucketSort(int nums[], int len) {
 }
 
 static void SortTest() {
-	int head[8] = {2,3,4,6,8,7,0,0};
+	int head[8] = {2,3,4,6,8,7,0,1};
 	//vector<int> head1 = vector<int>{ 2,3,4,5,8,7,0};
-	int* temp = new int[20];
-	//MergeSort(head2,0,6, temp);
-	BucketSort(head,8);
+	MergeSort(head,0,7);
+	//BucketSort(head,8);
 	int* head2 = head;
 
 	//merge_sort(head,6);

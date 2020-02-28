@@ -99,6 +99,12 @@
     <ClInclude Include="_230_Kth_Smallest_Element_in_a_BST.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_147_Insertion_Sort_List.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_215_Kth_Largest_Element_in_an_Array.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
