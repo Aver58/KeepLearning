@@ -184,6 +184,7 @@
     <ClInclude Include="_461_Hamming_Distance.h" />
     <ClInclude Include="_49_Group_Anagrams.h" />
     <ClInclude Include="_739_Daily_Temperatures.h" />
+    <ClInclude Include="_91_Decode_Ways.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LeetCode_Cpp.cpp" />
