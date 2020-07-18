@@ -67,35 +67,35 @@ public:
 	int combinationSum4(vector<int>& nums, int target) {
 		//1. 回溯法
 		//2. 记忆法回溯dp
-		this->candidates = nums;
-		this->size = nums.size();
-		vector<int> dp (target + 1,0);
-		dp[0] = 1;
-		return DFS(target, dp);
-		//3. 动态规划（自底向上）
-		//首先计算粒度最小的问题
-		//然后计算粒度更大的问题，直到问题规模达到输入规模
-		//dp[1] = dp[0] = 1;
-		//dp[2] = dp[1] + dp[0] = 2;
-		//dp[3] = dp[2] + dp[1] + dp[0] = 4;
-		//dp[4] = dp[4 - 1] + dp[4 - 2] + dp[4 - 3] = dp[3] + dp[2] + dp[1] = 7
-		long *dp = new long[target + 1];
-		dp[0] = 1;
-		for (int i = 1; i < target + 1; i++)dp[i] = 0;
+		//this->candidates = nums;
+		//this->size = nums.size();
+		//vector<int> dp (target + 1,0);
+		//dp[0] = 1;
+		//return DFS(target, dp);
+		////3. 动态规划（自底向上）
+		////首先计算粒度最小的问题
+		////然后计算粒度更大的问题，直到问题规模达到输入规模
+		////dp[1] = dp[0] = 1;
+		////dp[2] = dp[1] + dp[0] = 2;
+		////dp[3] = dp[2] + dp[1] + dp[0] = 4;
+		////dp[4] = dp[4 - 1] + dp[4 - 2] + dp[4 - 3] = dp[3] + dp[2] + dp[1] = 7
+		//long *dp = new long[target + 1];
+		//dp[0] = 1;
+		//for (int i = 1; i < target + 1; i++)dp[i] = 0;
 
-		for (int i = 1; i <= target; i++)
-		{
-			for (int j = 0; j < nums.size(); j++)
-			{
-				if (nums[j] <= i)
-				{
+		//for (int i = 1; i <= target; i++)
+		//{
+		//	for (int j = 0; j < nums.size(); j++)
+		//	{
+		//		if (nums[j] <= i)
+		//		{
 
-					dp[i] += dp[i - nums[j]];
-					if (dp[i] > INT_MAX)dp[i] %= INT_MAX;
-				}
-			}
-		}
-		return dp[target];
+		//			dp[i] += dp[i - nums[j]];
+		//			if (dp[i] > INT_MAX)dp[i] %= INT_MAX;
+		//		}
+		//	}
+		//}
+		//return dp[target];
 	}
 };
 

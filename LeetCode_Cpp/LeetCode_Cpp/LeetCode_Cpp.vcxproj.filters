@@ -72,6 +72,42 @@
     <ClInclude Include="_49_Group_Anagrams.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="unity_test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_1_Two_Sum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_2_Add_Two_Numbers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_242_Valid_Anagram.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_25_Reverse_Nodes_in_k_Group.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_739_Daily_Temperatures.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_20_Valid_Parentheses.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_239_Sliding_Window_Maximum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_230_Kth_Smallest_Element_in_a_BST.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_147_Insertion_Sort_List.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_215_Kth_Largest_Element_in_an_Array.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_91_Decode_Ways.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
