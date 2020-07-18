@@ -8,6 +8,7 @@ using namespace std;
 #include<list>
 #include <math.h>
 #include <unordered_map>
+#include <unordered_set>
 #include <iostream>
 #include <map>  
 #include <algorithm>  
@@ -40,4 +41,11 @@ template <class T>
 int GetArrayLen(T& array)
 {
 	return (sizeof(array) / sizeof(array[0]));
+}
+
+int max(int a, int b) {
+	if (a > b)
+		return a;
+	else
+		return b;
 }

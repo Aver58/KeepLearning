@@ -14,8 +14,9 @@
 // 输出: "10101"
 
 // using namespace std;
+#include "Global.h"
 
-class Solution {
+class _67_AddBinary {
 public:
     string addBinary(string a, string b) {
        string sumString = "";

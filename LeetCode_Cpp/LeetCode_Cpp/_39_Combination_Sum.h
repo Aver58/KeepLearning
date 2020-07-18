@@ -28,9 +28,6 @@ A solution set is:
   [3,5]
 ]
 
-来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/combination-sum
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
 
 #include "Global.h"
@@ -50,6 +47,9 @@ public:
 	}
 
 	void DFS(int start, int target) {
+		if (target < 0)
+			return;
+
 		if (target == 0) {
 			resList.push_back(temp);
 			return;
@@ -64,11 +64,11 @@ public:
 	}
 
 	vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-		//1. 暴力法
-		//思路： 以target为根节点做一棵树，每层减去所有节点，如果小于0，就剪掉
+		//1. 暴力法：罗列出所有子集，然后逐个判断总和是否为给定目标值
 
 		//2. 回溯 + 剪枝(减法版) 12 ms 97%
-		std::sort(candidates.begin(), candidates.end());
+		//思路： 以target为根节点做一棵树，每层减去所有节点，如果小于0，就剪掉
+		//std::sort(candidates.begin(), candidates.end());// 还是不排序了，排序也很浪费时间
 		this->candidates = candidates;
 		this->size = candidates.size();
 		DFS(0, target);

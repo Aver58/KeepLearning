@@ -18,10 +18,6 @@ Note:
 All inputs will be in lowercase.
 The order of your output does not matter.
 
-来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/group-anagrams
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-
 */
 
 #include "Global.h"
@@ -35,6 +31,47 @@ public:
 	}
 
 	vector<vector<string>> groupAnagrams(vector<string>& strs) {
-	
+		int size = strs.size();
+		if (size < 1)
+			return vector<vector<string>>{};
+		// 1. 排序后相等的字符串是异位词
+		// todo
+
+
+		// 2. 异位词【质数！！】乘积相同，做个map
+		//26个字母的质数对应表
+		int char_hash[26] = {
+			2,  3,  5,  7,  11,
+			13, 17, 19, 23, 29,
+			31, 37, 41, 43, 47,
+			53, 59, 61, 67, 71,
+			73, 79, 83, 89, 97,
+			101
+		};
+
+		map<int, int> hashMap;
+		vector<vector<string>> res;
+		for (size_t i = 0; i < size; i++)
+		{
+			string str = strs[i];
+			if (str == "")
+				continue;
+			int hash_key = 1;
+			for (auto ch : str)
+			{
+				hash_key *= char_hash[ch - 'a'];
+			}
+
+			if (hashMap.count(hash_key) > 0)
+			{
+				res[hashMap[hash_key]].push_back(str);
+			}
+			else
+			{
+				hashMap[hash_key] = i;
+				res[res.size()].push_back(str);
+			}
+		}
+		return res;
 	}
 };

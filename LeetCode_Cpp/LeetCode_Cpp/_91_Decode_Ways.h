@@ -21,9 +21,6 @@ Input: "226"
 Output: 3
 Explanation: It could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
 
-2262
-
-
 */
 
 #include "Global.h"
@@ -32,13 +29,37 @@ class _91_Decode_Ways
 {
 public:
 	void Test() {
-		string head = "12";
+		string head = "226";
 		_91_Decode_Ways::numDecodings(head);
 	}
 
 	int numDecodings(string s) {
-		//1位数编码1次，
-		int count = 0;
+		// 动态规划
+		if (s[0] == '0')
+			return 0;
+		// 分情况讨论：
+		// 1. s[i] = '0',前面是1还是2都是只有一种编码方式
+		// 2. s[i - 1] == '1' ==> dp[i] = dp[i-1] + dp[i-2]
+		// 3. s[i - 1] == '2' && s[i] >= 1 and s[i] <= 6 ==> dp[i] = dp[i-1] + dp[i-2]
+		int count = 1;
+		int preCount = 1;
+		for(int i = 1; i < s.size(); i++)
+		{
+			int tmp = count;
+			if (s[i] == '0')
+			{
+				if (s[i - 1] == '1' || s[i - 1] == '2') count = preCount;
+				else return 0;
+			}
+			else if (s[i - 1] == '1' || ((s[i - 1] == '2' && s[i] >= '1' && s[i] <= '6')))
+			{
+				count += preCount;
+			}
+			preCount = tmp;
+		}
+		return count;
 
+		// 递归版本：
+		//dp[i] = dp[i - 1] + dp[i - 2]
 	}
 };
