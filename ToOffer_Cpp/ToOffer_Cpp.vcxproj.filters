@@ -56,27 +56,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\ToOffer_Cpp\_18_Tree.h">
-      <Filter>资源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\ToOffer_Cpp\_20_PrintMatrix.h">
-      <Filter>资源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\ToOffer_Cpp\_21_StackWithMin.h">
-      <Filter>资源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\ToOffer_Cpp\_22_StackPushPopOrder.h">
-      <Filter>资源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\ToOffer_Cpp\FirstClass_Student.h">
-      <Filter>资源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\ToOffer_Cpp\Main.h">
-      <Filter>资源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\ToOffer_Cpp\Swap.h">
-      <Filter>资源文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\ToOffer_Cpp\_12_PrintOneToN.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -87,6 +66,27 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\ToOffer_Cpp\_17_Tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ToOffer_Cpp\_18_Tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ToOffer_Cpp\_20_PrintMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ToOffer_Cpp\_21_StackWithMin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ToOffer_Cpp\_22_StackPushPopOrder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ToOffer_Cpp\FirstClass_Student.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ToOffer_Cpp\Main.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ToOffer_Cpp\Swap.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
