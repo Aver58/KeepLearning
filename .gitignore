@@ -4,3 +4,9 @@ LeetCode_Cpp/x64/
 LeetCode_Cpp/Debug/
 LeetCode_Cpp/.vs/
 .vs
+*.csproj
+ToOffer_Cpp/ToOffer_Cpp.vcxproj
+*.filters
+*.sln
+ToOffer_Cs/ToOffer_Cs/bin/
+ToOffer_Cs/ToOffer_Cs/obj/
