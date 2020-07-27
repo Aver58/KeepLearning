@@ -3,7 +3,6 @@ using namespace std;
 
 class Student
 {
-
 private:
     int age;
     string name;
@@ -30,3 +29,18 @@ void Student::show2()
 {
     cout<<"Age : "<<this->age<<"\nName : "<<this->name<<endl;
 }
+
+//int main()
+//{
+//    //两种实例化类的方式
+//    Student s(16, "puyangsky");
+//    s.show(14, "puyangsky");
+//    s.show2();
+//
+//
+//    Student* s1 = new Student(16, "puyangsky");
+//    s1->show2();
+//
+//    getchar();
+//    return 0;
+//}

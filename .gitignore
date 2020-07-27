@@ -10,3 +10,4 @@ ToOffer_Cpp/ToOffer_Cpp.vcxproj
 *.sln
 ToOffer_Cs/ToOffer_Cs/bin/
 ToOffer_Cs/ToOffer_Cs/obj/
+Debug/
