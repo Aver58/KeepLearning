@@ -19,24 +19,23 @@ public:
 		if (matrix != nullptr && rows > 0 && columns > 0)
 		{
 			int row = 0;
-			int column = 0;
-			while (row < rows && column < columns)
+			int column = columns - 1;
+			while (row < rows && column >= 0)
 			{
-				int index = columns - 1;
-				if (number == matrix[row * column + index])
+				if (number == matrix[row * columns + column])
 				{
 					found = true;
 					break;
 				}
 				else
 				{
-					if (number > matrix[row * column + index])
+					if (number > matrix[row * column + column])
 					{
 						row++;
 					}
 					else
 					{
-						index--;
+						column--;
 					}
 				}
 			}
