@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_283_MoveZeroes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_234_PalindromeLinkedList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_437_Path_Sum_III.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_448_Find_All_Numbers_Disappeared_in_an_Array.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_35_Search_Insert_Position.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_461_Hamming_Distance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_34_Find_First_and_Last_Position_of_Element_in_Sorted_Array.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SortFunc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_278_First_Bad_Version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_374_Guess_Number_Higher_or_Lower.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_375_Guess_Number_Higher_or_LowerII.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_39_Combination_Sum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_40_Combination_Sum_II.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_216_Combination_Sum_III.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_377_Combination_Sum_IV.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_49_Group_Anagrams.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unity_test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_1_Two_Sum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_2_Add_Two_Numbers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_242_Valid_Anagram.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_25_Reverse_Nodes_in_k_Group.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_739_Daily_Temperatures.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_20_Valid_Parentheses.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_239_Sliding_Window_Maximum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_230_Kth_Smallest_Element_in_a_BST.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_147_Insertion_Sort_List.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_215_Kth_Largest_Element_in_an_Array.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_91_Decode_Ways.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LeetCode_Cpp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
