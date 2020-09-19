@@ -1,16 +1,6 @@
 #include <iostream>
+#include "../LeetCode_Cpp/Global.h"
 using namespace std;
-
-struct ListNode
-{
-    int m_value;
-    ListNode* m_next;
-    ListNode(int n)
-    {
-        m_value = n;
-        m_next = NULL;
-    }
-};
 
 class ChainList
 {

@@ -51,6 +51,9 @@
     <ClCompile Include="_28_StringPermutation.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
+    <ClCompile Include="Utilities\List.cpp">
+      <Filter>头文件\Utilities</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -101,7 +104,7 @@
     <ClInclude Include="_05_PrintListInReversedOrder.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="List.h">
+    <ClInclude Include="Utilities\List.h">
       <Filter>头文件\Utilities</Filter>
     </ClInclude>
   </ItemGroup>

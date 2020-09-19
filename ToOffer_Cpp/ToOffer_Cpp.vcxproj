@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ToOffer_Cpp.cpp" />
+    <ClCompile Include="Utilities\List.cpp" />
     <ClCompile Include="_12_PrintOneToN.cpp" />
     <ClCompile Include="_14_OrderOddNumberFirst.cpp" />
     <ClCompile Include="_15_ChainList.cpp" />
@@ -162,9 +163,9 @@
   <ItemGroup>
     <ClInclude Include="..\LeetCode_Cpp\Global.h" />
     <ClInclude Include="FirstClass_Student.h" />
-    <ClInclude Include="List.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Utilities\BinaryTree.h" />
+    <ClInclude Include="Utilities\List.h" />
     <ClInclude Include="_03_FindInPartiallySortedMatrix.h" />
     <ClInclude Include="_04_ReplaceSpaces.h" />
     <ClInclude Include="_05_PrintListInReversedOrder.h" />
