@@ -1,12 +1,28 @@
-// Âè™ÁºñËØë1Ê¨°
+/*******************************************************************
+Copyright(c) 2016, Harry He
+All rights reserved.
+
+Distributed under the BSD license.
+(See accompanying file LICENSE.txt at
+https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
+*******************************************************************/
+
+//==================================================================
+// °∂Ω£÷∏Offer°™°™√˚∆Û√Ê ‘πŸæ´Ω≤µ‰–Õ±‡≥ÃÃ‚°∑¥˙¬Î
+// ◊˜’ﬂ£∫∫Œ∫£ÃŒ
+//==================================================================
+
 #pragma once
 
-#include <vector>
-
-struct BinaryTreeNode
+struct BinaryTreeNode 
 {
-    int m_nValue;
-    BinaryTreeNode *m_pLeft;
-    BinaryTreeNode *m_pright;
-    BinaryTreeNode(int value){m_nValue = value;}
+    int                    m_nValue; 
+    BinaryTreeNode*        m_pLeft;  
+    BinaryTreeNode*        m_pRight; 
 };
+
+__declspec( dllexport ) BinaryTreeNode* CreateBinaryTreeNode(int value);
+__declspec( dllexport ) void ConnectTreeNodes(BinaryTreeNode* pParent, BinaryTreeNode* pLeft, BinaryTreeNode* pRight);
+__declspec( dllexport ) void PrintTreeNode(const BinaryTreeNode* pNode);
+__declspec( dllexport ) void PrintTree(const BinaryTreeNode* pRoot);
+__declspec( dllexport ) void DestroyTree(BinaryTreeNode* pRoot);
