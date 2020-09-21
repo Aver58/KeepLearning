@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ToOffer_Cpp.cpp" />
+    <ClCompile Include="Utilities\BinaryTree.cpp" />
     <ClCompile Include="Utilities\List.cpp" />
     <ClCompile Include="_12_PrintOneToN.cpp" />
     <ClCompile Include="_14_OrderOddNumberFirst.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="_03_FindInPartiallySortedMatrix.h" />
     <ClInclude Include="_04_ReplaceSpaces.h" />
     <ClInclude Include="_05_PrintListInReversedOrder.h" />
+    <ClInclude Include="_07_ConstructBinaryTree.h" />
     <ClInclude Include="_12_PrintOneToN.h" />
     <ClInclude Include="_14_OrderOddNumberFirst.h" />
     <ClInclude Include="_15_ChainList.h" />

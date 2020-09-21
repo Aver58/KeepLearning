@@ -54,6 +54,9 @@
     <ClCompile Include="Utilities\List.cpp">
       <Filter>头文件\Utilities</Filter>
     </ClCompile>
+    <ClCompile Include="Utilities\BinaryTree.cpp">
+      <Filter>头文件\Utilities</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -106,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="Utilities\List.h">
       <Filter>头文件\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="_07_ConstructBinaryTree.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

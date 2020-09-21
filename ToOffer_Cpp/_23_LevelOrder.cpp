@@ -21,8 +21,8 @@ void PrintFromTopToBottom(BinaryTreeNode* pTreeRoot)
             dequeTreeNode.push_back(pNode->m_pLeft);
         }
         
-         if (pNode->m_pright) {
-            dequeTreeNode.push_back(pNode->m_pright);
+         if (pNode->m_pRight) {
+            dequeTreeNode.push_back(pNode->m_pRight);
         }
     }
 }
