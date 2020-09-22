@@ -171,6 +171,7 @@
     <ClInclude Include="_04_ReplaceSpaces.h" />
     <ClInclude Include="_05_PrintListInReversedOrder.h" />
     <ClInclude Include="_07_ConstructBinaryTree.h" />
+    <ClInclude Include="_08_NextNodeInBinaryTrees.h" />
     <ClInclude Include="_12_PrintOneToN.h" />
     <ClInclude Include="_14_OrderOddNumberFirst.h" />
     <ClInclude Include="_15_ChainList.h" />
