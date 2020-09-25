@@ -172,6 +172,9 @@
     <ClInclude Include="_05_PrintListInReversedOrder.h" />
     <ClInclude Include="_07_ConstructBinaryTree.h" />
     <ClInclude Include="_08_NextNodeInBinaryTrees.h" />
+    <ClInclude Include="_09_QueueWithTwoStacks.h" />
+    <ClInclude Include="_10_Fibonacci.h" />
+    <ClInclude Include="_11_MinNumberInRotatedArray.h" />
     <ClInclude Include="_12_PrintOneToN.h" />
     <ClInclude Include="_14_OrderOddNumberFirst.h" />
     <ClInclude Include="_15_ChainList.h" />

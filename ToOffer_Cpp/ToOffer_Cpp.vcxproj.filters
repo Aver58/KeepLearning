@@ -116,5 +116,14 @@
     <ClInclude Include="_08_NextNodeInBinaryTrees.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_09_QueueWithTwoStacks.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_10_Fibonacci.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_11_MinNumberInRotatedArray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
