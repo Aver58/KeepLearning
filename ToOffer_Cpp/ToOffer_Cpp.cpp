@@ -5,12 +5,12 @@
 #include "_03_FindInPartiallySortedMatrix.h"
 #include "_05_PrintListInReversedOrder.h"
 #include "_07_ConstructBinaryTree.h"
+#include "_12_StringPathInMatrix.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
-	//_05_PrintListInReversedOrder().Test1();
-	_07_ConstructBinaryTree().Test1();
+	_12_StringPathInMatrix().Test1();
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
