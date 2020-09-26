@@ -125,5 +125,8 @@
     <ClInclude Include="_12_StringPathInMatrix.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_14_CuttingRope.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
