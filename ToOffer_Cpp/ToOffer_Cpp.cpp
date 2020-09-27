@@ -7,9 +7,10 @@
 #include "_07_ConstructBinaryTree.h"
 #include "_12_StringPathInMatrix.h"
 #include "_14_CuttingRope.h"
+#include "_15_NumberOf1InBinary.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
-	_14_CuttingRope().main();
+	_15_NumberOf1InBinary().main();
 }

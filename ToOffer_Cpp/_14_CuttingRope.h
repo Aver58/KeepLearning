@@ -18,6 +18,7 @@ class _14_CuttingRope
 	int maxProductAfterCutting_solution1(int length)
 	{
         // todo 这个有点没懂
+        return 0;
 	}
 
     // ====================贪婪算法====================

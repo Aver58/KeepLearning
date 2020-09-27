@@ -128,5 +128,11 @@
     <ClInclude Include="_14_CuttingRope.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_13_RobotMove.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_15_NumberOf1InBinary.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
