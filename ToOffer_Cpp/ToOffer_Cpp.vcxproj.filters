@@ -134,5 +134,8 @@
     <ClInclude Include="_15_NumberOf1InBinary.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_16_Power.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

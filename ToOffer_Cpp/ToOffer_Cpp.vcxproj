@@ -181,6 +181,7 @@
     <ClInclude Include="_14_OrderOddNumberFirst.h" />
     <ClInclude Include="_15_ChainList.h" />
     <ClInclude Include="_15_NumberOf1InBinary.h" />
+    <ClInclude Include="_16_Power.h" />
     <ClInclude Include="_17_Tree.h" />
     <ClInclude Include="_18_Tree.h" />
     <ClInclude Include="_01_AssignmentOperator.h" />

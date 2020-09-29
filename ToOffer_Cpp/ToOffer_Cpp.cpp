@@ -8,9 +8,10 @@
 #include "_12_StringPathInMatrix.h"
 #include "_14_CuttingRope.h"
 #include "_15_NumberOf1InBinary.h"
+#include "_16_Power.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
-	_15_NumberOf1InBinary().main();
+	_16_Power().main();
 }
