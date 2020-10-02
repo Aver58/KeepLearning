@@ -8,7 +8,7 @@
 
 class _15_NumberOf1InBinary
 {
-    // 遍历逐位比较是否是1
+    // 方法1：遍历逐位比较是否是1，比完左移一位
     int NumberOf1_Solution1(int n)
     {
         int count = 0;
@@ -24,9 +24,9 @@ class _15_NumberOf1InBinary
         return count;
     }
 
+    // 方法2：经验模型
     // 以1100为例：1100 - 1 = 1011；
     // 1011&1100 = 1000相当于把最右的1去掉，
-    // 这个感觉是经验模型
     int NumberOf1_Solution2(int n)
     {
         int count = 0;

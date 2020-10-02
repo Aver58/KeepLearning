@@ -57,15 +57,15 @@
     <ClCompile Include="Utilities\BinaryTree.cpp">
       <Filter>头文件\Utilities</Filter>
     </ClCompile>
+    <ClCompile Include="_17_Print1ToMaxOfNDigits.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="_14_OrderOddNumberFirst.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="_15_ChainList.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="_17_Tree.h">
@@ -135,6 +135,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="_16_Power.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_17_Print1ToMaxOfNDigits.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
