@@ -29,8 +29,41 @@ class _17_Print1ToMaxOfNDigits
 	// 如果做加法溢出，则返回true；否则为false
 	bool Increment(char* number)
 	{
-		
+		int nSum = 0;
+		bool bOverFlow = false;
+		int nTakeOver = 0;
+		int nLength = strlen(number);
+		for (int i = nLength - 1; i >= 0; i--)
+		{
+			nSum = number[i] - '0' + nTakeOver;
+			// 加法
+			if (i == nLength - 1)
+				nSum++;
+
+			if (nSum >= 10)
+			{
+				// 进位
+				if (i == 0)
+				{
+					// 最后一位还进位就溢出了
+					bOverFlow = true;
+				}
+				else
+				{
+					nTakeOver = 1;
+					number[i] = '0';
+				}
+			}
+			else
+			{
+				// 没进位，终止
+				number[i] = '0' + nSum;
+				break;
+			}
+		}
+		return bOverFlow;
 	}
+
 	// ====================公共函数====================
 	// 字符串number表示一个数字，数字有若干个0开头
 	// 打印出这个数字，并忽略开头的0
