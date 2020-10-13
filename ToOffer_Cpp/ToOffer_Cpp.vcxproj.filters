@@ -21,9 +21,6 @@
     <ClCompile Include="ToOffer_Cpp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="_12_PrintOneToN.cpp">
-      <Filter>头文件</Filter>
-    </ClCompile>
     <ClCompile Include="_14_OrderOddNumberFirst.cpp">
       <Filter>头文件</Filter>
     </ClCompile>

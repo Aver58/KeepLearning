@@ -9,9 +9,10 @@
 #include "_14_CuttingRope.h"
 #include "_15_NumberOf1InBinary.h"
 #include "_16_Power.h"
+#include "_17_Print1ToMaxOfNDigits.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
-	_16_Power().main();
+	_17_Print1ToMaxOfNDigits().main();
 }

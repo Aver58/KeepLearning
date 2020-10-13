@@ -8,7 +8,7 @@
 
 class _17_Print1ToMaxOfNDigits
 {
-	// 大数问题:字符串模拟加法
+	// 方法一、大数问题:字符串模拟加法
 	void Print1ToMaxOfNDigits_1(int n)
 	{
 		if (n <= 0)
@@ -64,6 +64,39 @@ class _17_Print1ToMaxOfNDigits
 		return bOverFlow;
 	}
 
+	// ====================方法二：递归====================
+	void Print1ToMaxOfNDigits_2(int n)
+	{
+		if (n <= 0)
+			return;
+		
+		char* number = new char[n + 1];
+		number[n] = '\0';
+
+		for (int i = 0; i < 10; ++i) 
+		{
+			number[0] = i + '0';
+			Print1ToMaxOfNDigitsRecursively(number, n, 0);
+		}
+
+		delete[] number;
+	}
+
+	void Print1ToMaxOfNDigitsRecursively(char* number,int length, int index)
+	{
+		if (index == length - 1)
+		{
+			PrintNumber(number);
+			return;
+		}
+
+		for (int i = 0; i < 10; ++i)
+		{
+			number[index + 1] = i + '0';
+			Print1ToMaxOfNDigitsRecursively(number, length, index + 1);
+		}
+	}
+
 	// ====================公共函数====================
 	// 字符串number表示一个数字，数字有若干个0开头
 	// 打印出这个数字，并忽略开头的0
@@ -84,6 +117,28 @@ class _17_Print1ToMaxOfNDigits
 		}
 
 		printf("\t");
+	}
+
+	// ====================测试代码====================
+	void Test(int n)
+	{
+		printf("Test for %d begins:\n", n);
+
+		Print1ToMaxOfNDigits_1(n);
+		Print1ToMaxOfNDigits_2(n);
+
+		printf("\nTest for %d ends.\n", n);
+	}
+public:
+	int main()
+	{
+		Test(1);
+		Test(2);
+		Test(3);
+		Test(0);
+		Test(-1);
+
+		return 0;
 	}
 };
 

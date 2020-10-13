@@ -150,7 +150,6 @@
     <ClCompile Include="ToOffer_Cpp.cpp" />
     <ClCompile Include="Utilities\BinaryTree.cpp" />
     <ClCompile Include="Utilities\List.cpp" />
-    <ClCompile Include="_12_PrintOneToN.cpp" />
     <ClCompile Include="_14_OrderOddNumberFirst.cpp" />
     <ClCompile Include="_15_ChainList.cpp" />
     <ClCompile Include="_17_Print1ToMaxOfNDigits.cpp" />
