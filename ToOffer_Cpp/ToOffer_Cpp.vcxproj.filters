@@ -137,5 +137,11 @@
     <ClInclude Include="_17_Print1ToMaxOfNDigits.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_18_01_DeleteNodeInList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_18_02_DeleteDuplicatedNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

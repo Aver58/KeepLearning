@@ -183,6 +183,8 @@
     <ClInclude Include="_16_Power.h" />
     <ClInclude Include="_17_Print1ToMaxOfNDigits.h" />
     <ClInclude Include="_17_Tree.h" />
+    <ClInclude Include="_18_01_DeleteNodeInList.h" />
+    <ClInclude Include="_18_02_DeleteDuplicatedNode.h" />
     <ClInclude Include="_18_Tree.h" />
     <ClInclude Include="_01_AssignmentOperator.h" />
     <ClInclude Include="_20_PrintMatrix.h" />
