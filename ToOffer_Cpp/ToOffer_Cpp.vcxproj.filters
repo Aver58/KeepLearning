@@ -143,5 +143,8 @@
     <ClInclude Include="_18_02_DeleteDuplicatedNode.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_19_RegularExpressionsMatching.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -187,6 +187,7 @@
     <ClInclude Include="_18_02_DeleteDuplicatedNode.h" />
     <ClInclude Include="_18_Tree.h" />
     <ClInclude Include="_01_AssignmentOperator.h" />
+    <ClInclude Include="_19_RegularExpressionsMatching.h" />
     <ClInclude Include="_20_PrintMatrix.h" />
     <ClInclude Include="_21_StackWithMin.h" />
     <ClInclude Include="_22_StackPushPopOrder.h" />
