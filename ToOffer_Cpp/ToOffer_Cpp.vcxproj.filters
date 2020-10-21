@@ -146,5 +146,11 @@
     <ClInclude Include="_19_RegularExpressionsMatching.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_20_NumericStrings.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_21_ReorderArray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
