@@ -3,7 +3,7 @@
 #include <stack>
 #include "Utilities/List.h"
 
-class _05_PrintListInReversedOrder
+class _06_PrintListInReversedOrder
 {
 public:
 	// 从尾到头打印链表

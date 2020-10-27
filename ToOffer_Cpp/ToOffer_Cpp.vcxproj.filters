@@ -152,5 +152,8 @@
     <ClInclude Include="_21_ReorderArray.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_22_KthNodeFromEnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

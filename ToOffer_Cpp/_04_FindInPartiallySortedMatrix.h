@@ -6,7 +6,7 @@
 using namespace std;
 #include <iostream>
 
-class _03_FindInPartiallySortedMatrix
+class _04_FindInPartiallySortedMatrix
 {
 public:
 	void Test() {

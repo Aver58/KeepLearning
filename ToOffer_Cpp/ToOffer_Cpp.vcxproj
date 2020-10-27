@@ -192,6 +192,7 @@
     <ClInclude Include="_20_PrintMatrix.h" />
     <ClInclude Include="_21_ReorderArray.h" />
     <ClInclude Include="_21_StackWithMin.h" />
+    <ClInclude Include="_22_KthNodeFromEnd.h" />
     <ClInclude Include="_22_StackPushPopOrder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
