@@ -152,24 +152,24 @@
     <ClCompile Include="Utilities\List.cpp" />
     <ClCompile Include="_14_OrderOddNumberFirst.cpp" />
     <ClCompile Include="_15_ChainList.cpp" />
-    <ClCompile Include="_17_Print1ToMaxOfNDigits.cpp" />
-    <ClCompile Include="_17_Tree.cpp" />
-    <ClCompile Include="_18_Tree.cpp" />
     <ClCompile Include="_20_PrintMatrix.cpp" />
     <ClCompile Include="_21_StackWithMin.cpp" />
     <ClCompile Include="_22_StackPushPopOrder.cpp" />
-    <ClCompile Include="_23_LevelOrder.cpp" />
     <ClCompile Include="_28_StringPermutation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\LeetCode_Cpp\Global.h" />
     <ClInclude Include="FirstClass_Student.h" />
+    <ClInclude Include="LineIntersection.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Utilities\BinaryTree.h" />
     <ClInclude Include="Utilities\List.h" />
-    <ClInclude Include="_03_FindInPartiallySortedMatrix.h" />
-    <ClInclude Include="_04_ReplaceSpaces.h" />
-    <ClInclude Include="_05_PrintListInReversedOrder.h" />
+    <ClInclude Include="_02_Singleton.h" />
+    <ClInclude Include="_03_01_DuplicationInArray.h" />
+    <ClInclude Include="_03_02_DuplicationInArrayNoEdit.h" />
+    <ClInclude Include="_04_FindInPartiallySortedMatrix.h" />
+    <ClInclude Include="_05_ReplaceSpaces.h" />
+    <ClInclude Include="_06_PrintListInReversedOrder.h" />
     <ClInclude Include="_07_ConstructBinaryTree.h" />
     <ClInclude Include="_08_NextNodeInBinaryTrees.h" />
     <ClInclude Include="_09_QueueWithTwoStacks.h" />
@@ -182,10 +182,8 @@
     <ClInclude Include="_15_NumberOf1InBinary.h" />
     <ClInclude Include="_16_Power.h" />
     <ClInclude Include="_17_Print1ToMaxOfNDigits.h" />
-    <ClInclude Include="_17_Tree.h" />
     <ClInclude Include="_18_01_DeleteNodeInList.h" />
     <ClInclude Include="_18_02_DeleteDuplicatedNode.h" />
-    <ClInclude Include="_18_Tree.h" />
     <ClInclude Include="_01_AssignmentOperator.h" />
     <ClInclude Include="_19_RegularExpressionsMatching.h" />
     <ClInclude Include="_20_NumericStrings.h" />
@@ -194,6 +192,16 @@
     <ClInclude Include="_21_StackWithMin.h" />
     <ClInclude Include="_22_KthNodeFromEnd.h" />
     <ClInclude Include="_22_StackPushPopOrder.h" />
+    <ClInclude Include="_23_EntryNodeInListLoop.h" />
+    <ClInclude Include="_24_ReverseList.h" />
+    <ClInclude Include="_25_MergeSortedLists.h" />
+    <ClInclude Include="_26_SubstructureInTree.h" />
+    <ClInclude Include="_27_MirrorOfBinaryTree.h" />
+    <ClInclude Include="_28_SymmetricalBinaryTree.h" />
+    <ClInclude Include="_29_PrintMatrix.h" />
+    <ClInclude Include="_30_MinInStack.h" />
+    <ClInclude Include="_31_StackPushPopOrder.h" />
+    <ClInclude Include="_32_PrintTree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

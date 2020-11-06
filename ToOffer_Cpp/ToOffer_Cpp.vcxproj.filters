@@ -27,12 +27,6 @@
     <ClCompile Include="_15_ChainList.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
-    <ClCompile Include="_17_Tree.cpp">
-      <Filter>头文件</Filter>
-    </ClCompile>
-    <ClCompile Include="_18_Tree.cpp">
-      <Filter>头文件</Filter>
-    </ClCompile>
     <ClCompile Include="_20_PrintMatrix.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
@@ -40,9 +34,6 @@
       <Filter>头文件</Filter>
     </ClCompile>
     <ClCompile Include="_22_StackPushPopOrder.cpp">
-      <Filter>头文件</Filter>
-    </ClCompile>
-    <ClCompile Include="_23_LevelOrder.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
     <ClCompile Include="_28_StringPermutation.cpp">
@@ -54,21 +45,12 @@
     <ClCompile Include="Utilities\BinaryTree.cpp">
       <Filter>头文件\Utilities</Filter>
     </ClCompile>
-    <ClCompile Include="_17_Print1ToMaxOfNDigits.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="_14_OrderOddNumberFirst.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="_17_Tree.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="_18_Tree.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="_20_PrintMatrix.h">
@@ -86,19 +68,10 @@
     <ClInclude Include="_01_AssignmentOperator.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="_03_FindInPartiallySortedMatrix.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Utilities\BinaryTree.h">
       <Filter>头文件\Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="_04_ReplaceSpaces.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\LeetCode_Cpp\Global.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="_05_PrintListInReversedOrder.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Utilities\List.h">
@@ -153,6 +126,57 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="_22_KthNodeFromEnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_23_EntryNodeInListLoop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_02_Singleton.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_03_01_DuplicationInArray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_03_02_DuplicationInArrayNoEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_06_PrintListInReversedOrder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_05_ReplaceSpaces.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_04_FindInPartiallySortedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_24_ReverseList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_25_MergeSortedLists.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_26_SubstructureInTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_27_MirrorOfBinaryTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_28_SymmetricalBinaryTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_29_PrintMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_30_MinInStack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_31_StackPushPopOrder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LineIntersection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_32_PrintTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

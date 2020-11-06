@@ -2,8 +2,6 @@
 //
 
 #include <iostream>
-#include "_03_FindInPartiallySortedMatrix.h"
-#include "_05_PrintListInReversedOrder.h"
 #include "_07_ConstructBinaryTree.h"
 #include "_12_StringPathInMatrix.h"
 #include "_14_CuttingRope.h"
@@ -12,9 +10,10 @@
 #include "_17_Print1ToMaxOfNDigits.h"
 #include "_19_RegularExpressionsMatching.h"
 #include "_22_KthNodeFromEnd.h"
+#include "_32_PrintTree.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
-	_22_KthNodeFromEnd().main();
+	_32_PrintTree().main();
 }
