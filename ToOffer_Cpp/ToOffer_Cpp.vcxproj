@@ -202,6 +202,8 @@
     <ClInclude Include="_30_MinInStack.h" />
     <ClInclude Include="_31_StackPushPopOrder.h" />
     <ClInclude Include="_32_PrintTree.h" />
+    <ClInclude Include="_33_SquenceOfBST.h" />
+    <ClInclude Include="_34_PathInTree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

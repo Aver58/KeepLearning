@@ -179,5 +179,11 @@
     <ClInclude Include="_32_PrintTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_33_SquenceOfBST.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_34_PathInTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
