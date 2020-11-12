@@ -47,7 +47,9 @@
     <Compile Include="DataStucture\Heap.cs" />
     <Compile Include="DataStucture\InfixToSuffix.cs" />
     <Compile Include="DataStucture\LinkListTest.cs" />
+    <Compile Include="DataStucture\List.cs" />
     <Compile Include="DataStucture\Ploynomial.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataStucture\QueueList.cs" />
     <Compile Include="DataStucture\SequenceList.cs" />
