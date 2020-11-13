@@ -260,6 +260,22 @@ namespace MyNamespace
         }
         #endregion
 
+        // 测试代码
+        public static void main()
+        {
+            MyNamespace.List<int> testList = new MyNamespace.List<int>();
+            testList.Add(1);
+            testList.Add(2);
+            testList.Add(3);
+            testList.Add(4);
+            testList.Insert(0, 4);
+            foreach(int item in testList)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ReadLine();
+        }
     }
 }
 
