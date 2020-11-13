@@ -234,9 +234,7 @@ namespace MyNamespace
             private bool MoveNextRare()
             {
                 if(version != list._version)
-                {
                     throw new Exception("version not matching!");
-                }
 
                 index = list._size + 1;
                 current = default(T);

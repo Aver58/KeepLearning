@@ -10,6 +10,8 @@
 #endregion
 
 using System;
+using System.Collections;
+using System.Diagnostics;
 
 public class Hashtable
 {
@@ -21,9 +23,16 @@ public class Hashtable
 
 internal static class HashHelpers
 {
+    // This is the maximum prime smaller than Array.MaxArrayLength
+    public const int MaxPrimeArrayLength = 0x7FEFFFFD;
 
     public const int HashCollisionThreshold = 100;
 
+    /// <summary>
+    /// 用于取哈希表的长度的表
+    /// 传统扩容长度算法会取一个比之前2倍容量大的最小素数
+    /// 假设我们当前容量为x，添加足量元素导致扩容，
+    /// </summary>
     // Table of prime numbers to use as hash table sizes. 
     // A typical resize algorithm would pick the smallest prime number in this array
     // that is larger than twice the previous capacity. 
@@ -53,8 +62,7 @@ internal static class HashHelpers
             if(prime >= min) return prime;
         }
 
-        //outside of our predefined table. 
-        //compute the hard way. 
+        //如果超出预先的数组
         for(int i = (min | 1); i < Int32.MaxValue; i += 2)
         {
             if(IsPrime(i) && ((i - 1) % Hashtable.HashPrime != 0))
@@ -63,6 +71,9 @@ internal static class HashHelpers
         return min;
     }
 
+    /// <summary>
+    /// 是否是素数
+    /// </summary>
     public static bool IsPrime(int candidate)
     {
         if((candidate & 1) != 0)
@@ -76,5 +87,36 @@ internal static class HashHelpers
             return true;
         }
         return (candidate == 2);
+    }
+
+    // Returns size of hashtable to grow to.
+    public static int ExpandPrime(int oldSize)
+    {
+        int newSize = 2 * oldSize;
+
+        // Allow the hashtables to grow to maximum possible size (~2G elements) before encoutering capacity overflow.
+        // Note that this check works even when _items.Length overflowed thanks to the (uint) cast
+        if((uint)newSize > MaxPrimeArrayLength && MaxPrimeArrayLength > oldSize)
+        {
+            Debug.Assert(MaxPrimeArrayLength == GetPrime(MaxPrimeArrayLength));
+            return MaxPrimeArrayLength;
+        }
+
+        return GetPrime(newSize);
+    }
+
+    public static bool IsWellKnownEqualityComparer(object comparer)
+    {
+        return (comparer == null || comparer == System.Collections.Generic.EqualityComparer<string>.Default || comparer is IWellKnownStringEqualityComparer);
+    }
+
+    // This interface is implemented by string comparers in the framework that can opt into
+    // randomized hashing behaviors.
+    internal interface IWellKnownStringEqualityComparer
+    {
+        // Get an IEqualityComparer that has the same equality comparision rules as "this" but uses Randomized Hashing.
+        IEqualityComparer GetRandomizedEqualityComparer();
+        // Get an IEqaulityComparer that can be serailzied (e.g., it exists in older versions).
+        IEqualityComparer GetEqualityComparerForSerialization();
     }
 }

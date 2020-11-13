@@ -10,14 +10,13 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
 
 public class Program
 {
     static void Main(string[] args)
     {
         //MyNamespace.List<int>.main();
-        Dictionary<string, int> test = new Dictionary<string, int>();
+        MyNamespace.Dictionary<int, int>.main();
 
         Console.ReadLine();
     }
