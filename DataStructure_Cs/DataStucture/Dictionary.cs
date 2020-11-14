@@ -72,8 +72,7 @@ namespace MyNamespace
             int hashCode = comparer.GetHashCode(key) & 0x7FFFFFFF;
             //将HashCode的返回值转化为数组索引
             int targetBucket = hashCode % buckets.Length;
-            // 处理hash碰撞冲突
-            // 如果转换出的bucketIndex大于等于0，判断buckets数组中有没有相等的，如果相等，需要处理冲突
+            // 处理hash碰撞冲突:如果转换出的bucketIndex大于等于0，判断buckets数组中有没有相等的，如果相等，需要处理冲突
             for(int i = buckets[targetBucket]; i >= 0; i = entries[i].next)
             {
                 //如果转换的hash值与之前已经添加的hash值相等，同时插入的key与之前的相同，处理冲突，key是唯一的，不能重复
@@ -126,7 +125,6 @@ namespace MyNamespace
                 Resize(entries.Length, true);
             }
         }
-
 
         /// <summary>
         /// 扩容数组
@@ -182,7 +180,8 @@ namespace MyNamespace
             if(buckets != null)
             {
                 int hashCode = comparer.GetHashCode(key) & 0x7FFFFFFF;
-                for(int i = buckets[hashCode % buckets.Length]; i >= 0; i = entries[i].next)
+                int targetBucket = hashCode % buckets.Length;
+                for(int i = buckets[targetBucket]; i >= 0; i = entries[i].next)
                 {
                     if(entries[i].hashCode == hashCode && comparer.Equals(entries[i].key, key)) 
                         return i;
@@ -232,6 +231,45 @@ namespace MyNamespace
                 return true;
             }
             value = default(TValue);
+            return false;
+        }
+
+        public bool Remove(TKey key)
+        {
+            if(key == null)
+                throw new ArgumentNullException();
+
+            if(buckets != null)
+            {
+                int hashCode = comparer.GetHashCode(key) & 0x7FFFFFFF;
+                int bucket = hashCode % buckets.Length;
+                int last = -1;
+                for(int i = buckets[bucket]; i >= 0; last = i, i = entries[i].next)
+                {
+                    if(entries[i].hashCode == hashCode && comparer.Equals(entries[i].key, key))
+                    {
+                        //如果key在索引0，直接找到或者遍历到数组索引0找到key
+                        if(last < 0)
+                        {
+                            // 把当前索引的bucket数组中的值重置，设置为-1
+                            buckets[bucket] = entries[i].next;
+                        }
+                        else
+                        {
+                            //遍历数组时，找到key，把当前删除元素的下一个元素的索引赋值给当前删除元素的上一个元素的next
+                            entries[last].next = entries[i].next;
+                        }
+                        entries[i].hashCode = -1;
+                        entries[i].next = freeList;
+                        entries[i].key = default(TKey);
+                        entries[i].value = default(TValue);
+                        freeList = i;
+                        freeCount++;
+                        return true;
+                    }
+                }
+            }
+
             return false;
         }
         #endregion
@@ -319,11 +357,13 @@ namespace MyNamespace
         // 测试代码
         public static void main()
         {
-            Dictionary<int,int> testList = new Dictionary<int, int>();
-            testList.Add(1, 1);
-            testList.Add(2, 2);
-            testList.Add(3, 3);
-            testList.Add(4, 4);
+            Dictionary<int,int> testList = new Dictionary<int, int>(6);
+            testList.Add(4, 1);
+            testList.Add(11, 2);
+            testList.Add(18, 3);
+            testList.Remove(4);
+            testList.Remove(11);
+            testList.Add(11, 2);
             foreach(var item in testList)
             {
                 Console.WriteLine(item);
