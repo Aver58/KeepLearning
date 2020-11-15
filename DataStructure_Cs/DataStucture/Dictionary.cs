@@ -27,25 +27,29 @@ namespace MyNamespace
             public TValue value;    // Value of entry
         }
 
-        private int[] buckets; //用来进行Hash碰撞
+        private int[] buckets;  //用来进行Hash碰撞
         private Entry[] entries;//用来存储字典的内容，并且标识下一个元素的位置。
         private int count;
-        private int version;// 当前版本，防止迭代过程中集合被更改
-        private int freeList;// 被删除Entry在entries中的下标index，这个位置是空闲的
-        private int freeCount;// 有多少个被删除的Entry，有多少个空闲的位置
-        //private KeyCollection keys;
+        private int version;    // 当前版本，防止迭代过程中集合被更改
+        private int freeList;   // 被删除Entry在entries中的下标index，这个位置是空闲的
+        private int freeCount;  // 有多少个被删除的Entry，有多少个空闲的位置
+        private KeyCollection keys;
         //private ValueCollection values;
         private IEqualityComparer<TKey> comparer;// 比较器
 
-        public Dictionary() : this(0) { }
+        public Dictionary() : this(0, null) {}
+        public Dictionary(int capacity) : this(capacity, null) { }
+        public Dictionary(IEqualityComparer<TKey> comparer) : this(0, comparer) { }
 
-        public Dictionary(int capacity)
+        public Dictionary(int capacity, IEqualityComparer<TKey> comparer = null)
         {
             if(capacity < 0) throw new ArgumentOutOfRangeException();
             if(capacity > 0) Initialize(capacity);
 
             this.comparer = comparer ?? EqualityComparer<TKey>.Default;
         }
+
+        //public Dictionary(IDictionary<TKey, TValue> dictionary) : this(dictionary, null) { }
 
         #region private
         private void Initialize(int capacity)
@@ -70,7 +74,7 @@ namespace MyNamespace
             int hashCode = comparer.GetHashCode(key) & 0x7FFFFFFF;
             //将HashCode的返回值转化为数组索引
             int targetBucket = hashCode % buckets.Length;
-            // 处理hash碰撞冲突:如果转换出的bucketIndex大于等于0，判断buckets数组中有没有相等的，如果相等，需要处理冲突
+            // 处理hash碰撞冲突:如果转换出的targetBucket大于等于0，判断buckets数组中有没有相等的，如果相等，需要处理冲突
             int collisionCount = 0;
             // 哈希碰撞
             for(int i = buckets[targetBucket]; i >= 0; i = entries[i].next)
@@ -81,7 +85,7 @@ namespace MyNamespace
                     if(add)
                         throw new Exception("Dictionary add duplicate key"+ key.ToString());
 
-                    // 更新值
+                    // 覆盖更新值
                     entries[i].value = value;
                     version++;
                     return;
@@ -90,9 +94,7 @@ namespace MyNamespace
             }
 
             int index;
-            //如果空链表的长度大于0，FreeList链表不为空，
-            //因此字典会优先把新增元素添加到FreeList链表所指向的位置，添加后FreeCount减1
-            // 如果有remove过key，从空闲的位置进行插入
+            // 如果空链表的长度大于0，FreeList链表不为空，字典会优先把新增元素添加到FreeList链表所指向的位置
             if(freeCount > 0)
             {
                 index = freeList;
@@ -174,7 +176,6 @@ namespace MyNamespace
             }
             buckets = newBuckets;
             entries = newEntries;
-
         }
 
         /// <summary>
@@ -218,8 +219,16 @@ namespace MyNamespace
             } 
         }
         //public ValueCollection Values { get; }
-        //public KeyCollection Keys { get; }
-        public int Count { get { return count; } }
+        public KeyCollection Keys { 
+            get 
+            {
+                if(keys == null) 
+                    keys = new KeyCollection(this);
+                return keys;
+            } 
+        }
+
+        public int Count { get { return count - freeCount; } }
 
         public void Add(TKey key, TValue value)
         {
@@ -266,9 +275,40 @@ namespace MyNamespace
             return false;
         }
 
-        //public void Clear();
-        //public bool ContainsKey(TKey key);
-        //public bool ContainsValue(TValue value);
+        public void Clear()
+        {
+            if(count > 0)
+            {
+                for(int i = 0; i < buckets.Length; i++)
+                    buckets[i] = -1;
+                Array.Clear(entries, 0, count);
+                freeList = -1;
+                freeCount = 0;
+                count = 0;
+                version++;
+            }
+        }
+
+        public bool ContainsKey(TKey key)
+        {
+            return FindEntry(key) != -1;
+        }
+
+        public bool ContainsValue(TValue value)
+        {
+            if(value != null)
+            {
+                EqualityComparer<TValue> c = EqualityComparer<TValue>.Default;
+                for(int i = 0; i < entries.Length; i++)
+                {
+                    if(c.Equals(entries[i].value, value) && entries[i].hashCode >= 0)
+                        return true;
+                }
+            }
+
+            return false;
+        }
+
         public bool TryGetValue(TKey key, out TValue value) 
         {
             int index = FindEntry(key);
@@ -280,7 +320,6 @@ namespace MyNamespace
             value = default(TValue);
             return false;
         }
-
      
         #endregion
 
@@ -297,7 +336,6 @@ namespace MyNamespace
         //}
 
         public struct Enumerator: IEnumerator<KeyValuePair<TKey, TValue>>
-        //, IDictionaryEnumerator
         {
             private Dictionary<TKey, TValue> dictionary;
             private int index;
@@ -364,10 +402,95 @@ namespace MyNamespace
 
         #endregion
 
-        // 测试代码
+        #region KeyCollection
+        public sealed class KeyCollection:IEnumerable
+        {
+            private Dictionary<TKey, TValue> dictionary;
+
+            public KeyCollection(Dictionary<TKey, TValue> dictionary)
+            {
+                if(dictionary == null)
+                    throw new ArgumentNullException();
+                this.dictionary = dictionary;
+            }
+
+            public IEnumerator GetEnumerator()
+            {
+                return new Enumerator(dictionary);
+            }
+
+            public int Count
+            {
+                get { return dictionary.Count; }
+            }
+
+            #region Enumerator
+            public struct Enumerator : IEnumerator
+            {
+                private Dictionary<TKey, TValue> dictionary;
+                private int index;
+                private int version;
+                private TKey currentKey;
+
+                internal Enumerator(Dictionary<TKey, TValue> dictionary)
+                {
+                    this.dictionary = dictionary;
+                    version = dictionary.version;
+                    index = 0;
+                    currentKey = default(TKey);
+                }
+
+                public Object Current 
+                {
+                    get 
+                    {
+                        if(version != dictionary.version)
+                            throw new Exception("version not matching!");
+
+                        return currentKey;
+                    }
+                }
+
+                public bool MoveNext()
+                {
+                    if(version != dictionary.version)
+                        throw new Exception("version not matching!");
+
+                    while((uint)index < (uint)dictionary.count)
+                    {
+                        if(dictionary.entries[index].hashCode >= 0)
+                        {
+                            currentKey = dictionary.entries[index].key;
+                            index++;
+                            return true;
+                        }
+                        index++;
+                    }
+
+                    index = dictionary.count + 1;
+                    currentKey = default(TKey);
+                    return false;
+                }
+
+                public void Reset()
+                {
+                    if(version != dictionary.version)
+                        throw new Exception("version not matching!");
+
+                    index = 0;
+                    currentKey = default(TKey);
+                }
+            }
+            #endregion
+
+        }
+
+        #endregion
+
+        #region 测试代码
         public static void main()
         {
-            Dictionary<int,int> testList = new Dictionary<int, int>(6);
+            Dictionary<int, int> testList = new Dictionary<int, int>(6);
             testList.Add(4, 1);
             testList.Add(11, 2);
             testList.Add(18, 3);
@@ -381,5 +504,6 @@ namespace MyNamespace
 
             Console.ReadLine();
         }
+        #endregion
     }
 }
