@@ -168,14 +168,14 @@ static int findindex(lua_State* L, Table* t, StkId key) {
 
 int luaH_next(lua_State* L, Table* t, StkId key) {
 	int i = findindex(L, t, key);  /* find original element */
-	for (i++; i < t->sizearray; i++) {  /* try first array part */
+	for (i++; i < t->sizearray; i++) {  /* 先遍历数组部分 */
 		if (!ttisnil(&t->array[i])) {  /* a non-nil value? */
 			setnvalue(key, cast_num(i + 1));
 			setobj2s(L, key + 1, &t->array[i]);
 			return 1;
 		}
 	}
-	for (i -= t->sizearray; i < sizenode(t); i++) {  /* then hash part */
+	for (i -= t->sizearray; i < sizenode(t); i++) {  /* 再遍历哈希部分 */
 		if (!ttisnil(gval(gnode(t, i)))) {  /* a non-nil value? */
 			setobj2s(L, key, gkey(gnode(t, i)));
 			setobj2s(L, key + 1, gval(gnode(t, i)));
@@ -509,7 +509,7 @@ const TValue* luaH_get(Table* t, const TValue* key) {
 			else n = gnext(n);
 		} while (n);
 		return luaO_nilobject;
-	}
+		}
 	}
 }
 
@@ -573,6 +573,7 @@ int luaH_getn(Table* t) {
 	if (j > 0 && ttisnil(&t->array[j - 1])) {
 		/* there is a boundary in the array part: (binary) search for it */
 		unsigned int i = 0;
+		//二分查找
 		while (j - i > 1) {
 			unsigned int m = (i + j) / 2;
 			if (ttisnil(&t->array[m - 1])) j = m;
@@ -581,7 +582,7 @@ int luaH_getn(Table* t) {
 		return i;
 	}
 	/* else must find a boundary in hash part */
-	else if (isdummy(t->node))  /* hash part is empty? */
+	else if (isdummy(t->node))  /* hash part is empty? node hash表是否为空*/
 		return j;  /* that is easy... */
 	else return unbound_search(t, j);
 }
