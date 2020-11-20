@@ -13,7 +13,19 @@ using System;
 
 namespace MyNamespace
 {
-    public class List<T>
+    public interface IList<T>
+    {
+        void Add(T item);
+        void Insert(int index, T item);
+        int IndexOf(T item);
+        bool Remove(T item);
+        void Clear();
+        bool Contains(T item);
+        void Reverse();
+        void Sort();
+    }
+
+    public class List<T>: IList<T>
     {
         private int _size;
         private T[] _items;
@@ -21,8 +33,11 @@ namespace MyNamespace
         /// 每次修改，值++，用来防止遍历中，被修改
         /// </summary>
         private int _version;
+        //默认容量为4
         private const int _defaultCapacity = 4;
+        //无论创建多少个对象，静态变量共享一个副本
         static readonly T[] _emptyArray = new T[0];
+        //数组最大长度
         internal const int MaxArrayLength = 0X7FEFFFFF;
 
         public List()
@@ -32,7 +47,7 @@ namespace MyNamespace
 
         public List(int capacity)
         {
-            if(capacity < 0)
+            if(capacity < 0 || capacity > MaxArrayLength)
                 throw new IndexOutOfRangeException();
 
             if(capacity == 0)
@@ -93,7 +108,7 @@ namespace MyNamespace
             }
         }
 
-        int IndexOf(T item)
+        public int IndexOf(T item)
         {
             if(item == null)
                 throw new NullReferenceException();
@@ -103,22 +118,6 @@ namespace MyNamespace
                     return i;
             }
             return -1;
-        }
-
-        void RemoveAt(int index)
-        {
-            if(index >= _size)
-                throw new IndexOutOfRangeException();
-
-            _size--;
-            // 将指定索引后面的item向前移动1个位置
-            if(index < _size)
-            {
-                Array.Copy(_items, index + 1, _items, index, _size - index);
-            }
-            // 最后一个值置空
-            _items[_size] = default(T);
-            _version++;
         }
 
         public void Add(T item)
@@ -151,21 +150,6 @@ namespace MyNamespace
             return false;
         }
 
-        // Ensures that the capacity of this list is at least the given minimum
-        // value. If the currect capacity of the list is less than min, the
-        // capacity is increased to twice the current capacity or to min,
-        // whichever is larger.
-        private void EnsureCapacity(int min)
-        {
-            if(_items.Length < min)
-            {
-                int newCapacity = _items.Length == 0 ? _defaultCapacity : _items.Length * 2;
-                if((uint)newCapacity > MaxArrayLength) newCapacity = MaxArrayLength;
-                if(newCapacity < min) newCapacity = min;
-                Capacity = newCapacity;
-            }
-        }
-
         public void Clear()
         {
             if(_size > 0)
@@ -191,6 +175,37 @@ namespace MyNamespace
         public void Sort()
         {
 
+        }
+
+        // Ensures that the capacity of this list is at least the given minimum
+        // value. If the currect capacity of the list is less than min, the
+        // capacity is increased to twice the current capacity or to min,
+        // whichever is larger.
+        private void EnsureCapacity(int min)
+        {
+            if(_items.Length < min)
+            {
+                int newCapacity = _items.Length == 0 ? _defaultCapacity : _items.Length * 2;
+                if((uint)newCapacity > MaxArrayLength) newCapacity = MaxArrayLength;
+                if(newCapacity < min) newCapacity = min;
+                Capacity = newCapacity;
+            }
+        }
+
+        private void RemoveAt(int index)
+        {
+            if(index >= _size)
+                throw new IndexOutOfRangeException();
+
+            _size--;
+            // 将指定索引后面的item向前移动1个位置
+            if(index < _size)
+            {
+                Array.Copy(_items, index + 1, _items, index, _size - index);
+            }
+            // 最后一个值置空
+            _items[_size] = default(T);
+            _version++;
         }
 
         #region Enumerator
