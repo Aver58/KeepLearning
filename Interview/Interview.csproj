@@ -48,6 +48,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Interview\3D数学.md" />
+    <None Include="Interview\C#.md" />
+    <None Include="Interview\C++.md" />
+    <None Include="Interview\lua.md" />
+    <None Include="Interview\Unity.md" />
+    <None Include="Interview\一堆基础_2019.08.23.md" />
+    <None Include="Interview\优化.md" />
+    <None Include="Interview\图形学渲染.md" />
+    <None Include="Interview\数据库\主键 超键 候选键 外键.md" />
+    <None Include="Interview\数据库\数据库事务的四个特性及含义.md" />
+    <None Include="Interview\数据库\数据库优化.md" />
+    <None Include="Interview\数据库\数据库范式.md" />
+    <None Include="Interview\数据库\索引的工作原理及其种类.md" />
+    <None Include="Interview\数据结构.md" />
+    <None Include="Interview\算法.md" />
+    <None Include="Interview\网络.md" />
+    <None Include="Interview\设计模式.md" />
+    <None Include="Interview\面试题整理.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
