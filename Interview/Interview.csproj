@@ -65,7 +65,7 @@
     <None Include="Interview\算法.md" />
     <None Include="Interview\网络.md" />
     <None Include="Interview\设计模式.md" />
-    <None Include="Interview\面试题整理.md" />
+    <None Include="Interview\题整理.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
