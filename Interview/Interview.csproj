@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interview\CSharp基础\AbstractClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -54,8 +55,11 @@
     <None Include="Interview\lua.md" />
     <None Include="Interview\Unity.md" />
     <None Include="Interview\一堆基础_2019.08.23.md" />
-    <None Include="Interview\优化.md" />
+    <None Include="Interview\性能优化\优化.md" />
     <None Include="Interview\图形学渲染.md" />
+    <None Include="Interview\数学题\一个点是否在三角形内.md" />
+    <None Include="Interview\数学题\判断球是否会相撞.md" />
+    <None Include="Interview\数学题\是否在扇形范围内.md" />
     <None Include="Interview\数据库\主键 超键 候选键 外键.md" />
     <None Include="Interview\数据库\数据库事务的四个特性及含义.md" />
     <None Include="Interview\数据库\数据库优化.md" />
