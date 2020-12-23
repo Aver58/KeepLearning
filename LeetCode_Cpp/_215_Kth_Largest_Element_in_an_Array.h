@@ -1,6 +1,7 @@
 ﻿#pragma once
 /*
-Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
+Find the kth largest element in an unsorted array.
+Note that it is the kth largest element in the sorted order, not the kth distinct element.
 
 Example 1:
 
@@ -80,7 +81,7 @@ public:
 
 	int findKthLargest(vector<int>& nums, int k) {
 		if (k <= 0 || k > nums.size()) return -1;
-		//① sort 12 ms 82.31%
+		// ① sort 12 ms 82.31%
 		//std::sort(nums.begin(), nums.end());
 		//return nums[nums.size() - k];
 
