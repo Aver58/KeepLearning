@@ -55,6 +55,8 @@
     <None Include="Interview\lua.md" />
     <None Include="Interview\Unity.md" />
     <None Include="Interview\一堆基础_2019.08.23.md" />
+    <None Include="Interview\性能优化\uwa本地资源检测.md" />
+    <None Include="Interview\性能优化\别人工作经历.md" />
     <None Include="Interview\性能优化\优化.md" />
     <None Include="Interview\图形学渲染.md" />
     <None Include="Interview\数学题\一个点是否在三角形内.md" />
@@ -66,7 +68,6 @@
     <None Include="Interview\数据库\数据库范式.md" />
     <None Include="Interview\数据库\索引的工作原理及其种类.md" />
     <None Include="Interview\数据结构.md" />
-    <None Include="Interview\经验.md" />
     <None Include="Interview\算法.md" />
     <None Include="Interview\网络.md" />
     <None Include="Interview\设计模式.md" />
