@@ -25,34 +25,14 @@
 #include "_230_Kth_Smallest_Element_in_a_BST.h"
 #include "_147_Insertion_Sort_List.h"
 #include "_215_Kth_Largest_Element_in_an_Array.h"
+#include "_287_Find_the_Duplicate_Number.h"
 #include "SortFunc.h"
 
 int main()
 {
     std::cout << "Hello World!\n"; 
 	
-	//_1_Two_Sum().Test();
-	//_234_PalindromeLinkedList::Test();
-	//_283_MoveZeroes::Test();
-	//_35_Search_Insert_Position::Test();
-	//_437_Path_Sum_III::Test();
-	//_448_Find_All_Numbers_Disappeared_in_an_Array::Test();
-	//_461_Hamming_Distance::Test();
-	//_34_Find_First_and_Last_Position_of_Element_in_Sorted_Array::Test();
-	//_278_First_Bad_Version::Test();
-	//_39_Combination_Sum().Test();
-	//_40_Combination_Sum_II().Test();
-	//_216_Combination_Sum_III().Test();
-	//_377_Combination_Sum_IV().Test();
-	//_242_Valid_Anagram().Test();
-	//_25_Reverse_Nodes_in_k_Group().Test();
-	//_739_Daily_Temperatures().Test();
-	//_20_Valid_Parentheses().Test();
-	//_239_Sliding_Window_Maximum().Test();
-	//_230_Kth_Smallest_Element_in_a_BST().Test();
-	//_147_Insertion_Sort_List().Test();
-	_215_Kth_Largest_Element_in_an_Array().Test();
-	//SortTest();
+	_287_Find_the_Duplicate_Number().Test();
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
