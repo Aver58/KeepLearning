@@ -58,7 +58,6 @@ public:
 		for (size_t i = 0; i < nums.size(); i++)
 		{
 			int source = abs(nums[i]);
-			
 			int target = nums[source];
 			if (target <= 0)
 				return abs(source);

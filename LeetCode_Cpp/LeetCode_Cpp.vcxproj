@@ -183,9 +183,12 @@
     <ClInclude Include="_437_Path_Sum_III.h" />
     <ClInclude Include="_448_Find_All_Numbers_Disappeared_in_an_Array.h" />
     <ClInclude Include="_461_Hamming_Distance.h" />
+    <ClInclude Include="_46_Permutations.h" />
     <ClInclude Include="_49_Group_Anagrams.h" />
     <ClInclude Include="_739_Daily_Temperatures.h" />
+    <ClInclude Include="_744_Find_Smallest_Letter_Greater_Than_Target.h" />
     <ClInclude Include="_91_Decode_Ways.h" />
+    <ClInclude Include="_983_Minimum_Cost_For_Tickets.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LeetCode_Cpp.cpp" />

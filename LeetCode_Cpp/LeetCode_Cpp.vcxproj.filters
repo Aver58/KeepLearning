@@ -111,6 +111,15 @@
     <ClInclude Include="_287_Find_the_Duplicate_Number.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_983_Minimum_Cost_For_Tickets.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_744_Find_Smallest_Letter_Greater_Than_Target.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_46_Permutations.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

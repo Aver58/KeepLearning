@@ -26,13 +26,15 @@
 #include "_147_Insertion_Sort_List.h"
 #include "_215_Kth_Largest_Element_in_an_Array.h"
 #include "_287_Find_the_Duplicate_Number.h"
+#include "_744_Find_Smallest_Letter_Greater_Than_Target.h"
+#include "_46_Permutations.h"
 #include "SortFunc.h"
 
 int main()
 {
     std::cout << "Hello World!\n"; 
 	
-	_287_Find_the_Duplicate_Number().Test();
+	_46_Permutations().Test();
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
