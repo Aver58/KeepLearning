@@ -32,9 +32,6 @@ All the integers of nums are unique.所有数都是独特的
 
 class _46_Permutations
 {
-private:
-	vector<int> visited;
-
 public:
 	void Test() {
 		vector<int> head{ 1,2,3 };
