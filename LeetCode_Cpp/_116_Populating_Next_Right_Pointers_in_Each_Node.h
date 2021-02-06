@@ -67,14 +67,21 @@ public:
 	}
 
 	Node* connect(Node* root) {
-		if (root == NULL)
-			return NULL;
-		connectTwoNode(root->left, root->right);
+		if (root == NULL) return NULL;
+		if (root->left == NULL && root->right == NULL) return root;
+		/**** 前序遍历位置 ****/
+		root->left->next = root->right;
+		// 连接跨越父节点的两个子节点
+		if (root->next)
+			root->right->next = root->next->left;
+		// 连接相同父节点的两个子节点
+		connect(root->left);
+		connect(root->right);
+		return root;
 	}
 
-	Node* connectTwoNode(Node* left, Node* right) {
-		if (left == NULL || right == NULL)
-			return;
+	void connectTwoNode(Node* left, Node* right) {
+		if (left == NULL || right == NULL) return;
 		
 		/**** 前序遍历位置 ****/
 		left->next = right;
@@ -83,6 +90,6 @@ public:
 		connectTwoNode(left->left, left->right);
 		connectTwoNode(right->left, right->right);
 		// 连接跨越父节点的两个子节点
-		connectTwoNode(right->right, right->left);
+		connectTwoNode(left->right, right->left);
 	}
 };

@@ -120,6 +120,30 @@
     <ClInclude Include="_46_Permutations.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_740_Delete_and_Earn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_47_Permutations_II.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_226_Invert_Binary_Tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_116_Populating_Next_Right_Pointers_in_Each_Node.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_114_Flatten_Binary_Tree_to_Linked_List.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_654_Maximum_Binary_Tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

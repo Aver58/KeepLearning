@@ -28,13 +28,14 @@
 #include "_287_Find_the_Duplicate_Number.h"
 #include "_744_Find_Smallest_Letter_Greater_Than_Target.h"
 #include "_46_Permutations.h"
+#include "_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.h"
 #include "SortFunc.h"
 
 int main()
 {
     std::cout << "Hello World!\n"; 
 	
-	_46_Permutations().Test();
+	_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal().Test();
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
