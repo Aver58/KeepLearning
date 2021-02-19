@@ -205,6 +205,7 @@
     <ClInclude Include="_33_SquenceOfBST.h" />
     <ClInclude Include="_34_PathInTree.h" />
     <ClInclude Include="_35_CopyComplexList.h" />
+    <ClInclude Include="_36_ConvertBinarySearchTree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

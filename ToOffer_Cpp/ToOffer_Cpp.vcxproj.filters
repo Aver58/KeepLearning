@@ -188,5 +188,8 @@
     <ClInclude Include="_35_CopyComplexList.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_36_ConvertBinarySearchTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
