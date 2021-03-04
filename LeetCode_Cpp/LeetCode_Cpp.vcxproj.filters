@@ -144,6 +144,12 @@
     <ClInclude Include="_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_652_Find_Duplicate_Subtrees.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_538_Convert_BST_to_Greater_Tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

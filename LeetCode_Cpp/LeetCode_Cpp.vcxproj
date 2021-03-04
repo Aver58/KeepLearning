@@ -191,6 +191,8 @@
     <ClInclude Include="_46_Permutations.h" />
     <ClInclude Include="_47_Permutations_II.h" />
     <ClInclude Include="_49_Group_Anagrams.h" />
+    <ClInclude Include="_538_Convert_BST_to_Greater_Tree.h" />
+    <ClInclude Include="_652_Find_Duplicate_Subtrees.h" />
     <ClInclude Include="_654_Maximum_Binary_Tree.h" />
     <ClInclude Include="_739_Daily_Temperatures.h" />
     <ClInclude Include="_740_Delete_and_Earn.h" />
