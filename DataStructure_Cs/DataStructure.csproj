@@ -50,7 +50,8 @@
     <Compile Include="DataStucture\InfixToSuffix.cs" />
     <Compile Include="DataStucture\LinkListTest.cs" />
     <Compile Include="DataStucture\List.cs" />
-    <Compile Include="DataStucture\Ploynomial.cs" />
+    <Compile Include="DataStucture\QuadTree.cs" />
+    <Compile Include="DataStucture\TrieTree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataStucture\QueueList.cs" />
