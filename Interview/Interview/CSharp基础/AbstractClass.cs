@@ -13,9 +13,12 @@ public abstract class AbstractClass
 {
     public virtual void virtualMethod() { }
     public abstract void method();
+    public abstract void method1();
 }
 
-public abstract class AbstractChildClass: AbstractClass
+public class AbstractChildClass : AbstractClass
 {
-    //public abstract void method();
+    // 必须实现所有抽象方法
+    public override void method() { }
+    public override void method1() { }
 }
