@@ -161,6 +161,7 @@
     <ClInclude Include="_116_Populating_Next_Right_Pointers_in_Each_Node.h" />
     <ClInclude Include="_147_Insertion_Sort_List.h" />
     <ClInclude Include="_1_Two_Sum.h" />
+    <ClInclude Include="_204_Count_Primes.h" />
     <ClInclude Include="_20_Valid_Parentheses.h" />
     <ClInclude Include="_215_Kth_Largest_Element_in_an_Array.h" />
     <ClInclude Include="_216_Combination_Sum_III.h" />
@@ -197,6 +198,7 @@
     <ClInclude Include="_739_Daily_Temperatures.h" />
     <ClInclude Include="_740_Delete_and_Earn.h" />
     <ClInclude Include="_744_Find_Smallest_Letter_Greater_Than_Target.h" />
+    <ClInclude Include="_79_Word_Search.h" />
     <ClInclude Include="_91_Decode_Ways.h" />
     <ClInclude Include="_983_Minimum_Cost_For_Tickets.h" />
   </ItemGroup>

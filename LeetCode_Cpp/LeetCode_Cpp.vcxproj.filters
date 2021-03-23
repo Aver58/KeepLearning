@@ -150,6 +150,12 @@
     <ClInclude Include="_538_Convert_BST_to_Greater_Tree.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_79_Word_Search.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_204_Count_Primes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

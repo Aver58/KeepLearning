@@ -31,6 +31,7 @@
 #include "_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.h"
 #include "_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.h"
 #include "_652_Find_Duplicate_Subtrees.h"
+#include "_204_Count_Primes.h"
 #include "SortFunc.h"
 
 
@@ -38,7 +39,7 @@ int main()
 {
     std::cout << "Hello World!\n"; 
 	
-	_652_Find_Duplicate_Subtrees().Test();
+	_204_Count_Primes().Test();
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
