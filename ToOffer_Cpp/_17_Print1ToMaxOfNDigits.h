@@ -5,6 +5,7 @@
 #pragma once
 #include <cstdio>
 #include <memory>
+#include <cstring>
 
 class _17_Print1ToMaxOfNDigits
 {

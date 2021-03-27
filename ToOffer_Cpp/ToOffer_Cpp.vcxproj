@@ -75,6 +75,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -159,9 +160,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\LeetCode_Cpp\Global.h" />
+    <ClInclude Include="..\LeetCode_Cpp\SortFunc.h" />
     <ClInclude Include="FirstClass_Student.h" />
     <ClInclude Include="LineIntersection.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Sort\BubbleSort.h" />
+    <ClInclude Include="Sort\SortBase.h" />
     <ClInclude Include="Utilities\BinaryTree.h" />
     <ClInclude Include="Utilities\List.h" />
     <ClInclude Include="_02_Singleton.h" />

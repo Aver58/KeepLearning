@@ -6,6 +6,7 @@
 
 #pragma once
 #include <iostream>
+#include <math.h>
 
 class _14_CuttingRope
 {

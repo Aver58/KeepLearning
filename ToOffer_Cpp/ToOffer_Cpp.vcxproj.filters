@@ -16,6 +16,9 @@
     <Filter Include="头文件\Utilities">
       <UniqueIdentifier>{daaca3a2-8be4-4e2b-90f6-3227a85a166d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Sort">
+      <UniqueIdentifier>{3f68ee93-ecd6-4eb4-aae4-15920fe7251a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ToOffer_Cpp.cpp">
@@ -190,6 +193,15 @@
     </ClInclude>
     <ClInclude Include="_36_ConvertBinarySearchTree.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\BubbleSort.h">
+      <Filter>头文件\Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\SortBase.h">
+      <Filter>头文件\Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LeetCode_Cpp\SortFunc.h">
+      <Filter>头文件\Sort</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

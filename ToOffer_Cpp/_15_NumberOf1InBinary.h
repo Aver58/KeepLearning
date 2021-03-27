@@ -44,15 +44,15 @@ class _15_NumberOf1InBinary
     {
         int actual = NumberOf1_Solution1(number);
         if (actual == expected)
-            printf("Solution1: Test for %p passed.actual = %d \n", number, actual);
+            printf("Solution1: Test for %d passed.actual = %d \n", number, actual);
         else
-            printf("Solution1: Test for %p failed.actual = %d \n", number, actual);
+            printf("Solution1: Test for %d failed.actual = %d \n", number, actual);
 
         actual = NumberOf1_Solution2(number);
         if (actual == expected)
-            printf("Solution2: Test for %p passed.actual = %d \n", number, actual);
+            printf("Solution2: Test for %d passed.actual = %d \n", number, actual);
         else
-            printf("Solution2: Test for %p failed.actual = %d \n", number, actual);
+            printf("Solution2: Test for %d failed.actual = %d \n", number, actual);
 
         printf("\n");
     }

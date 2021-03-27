@@ -1,8 +1,8 @@
-// ÃæÊÔÌâ19£ºÕýÔò±í´ïÊ½Æ¥Åä
-// ÌâÄ¿£ºÇëÊµÏÖÒ»¸öº¯ÊýÓÃÀ´Æ¥Åä°üº¬'.'ºÍ'*'µÄÕýÔò±í´ïÊ½¡£Ä£Ê½ÖÐµÄ×Ö·û'.'
-// ±íÊ¾ÈÎÒâÒ»¸ö×Ö·û£¬¶ø'*'±íÊ¾ËüÇ°ÃæµÄ×Ö·û¿ÉÒÔ³öÏÖÈÎÒâ´Î£¨º¬0´Î£©¡£ÔÚ±¾Ìâ
-// ÖÐ£¬Æ¥ÅäÊÇÖ¸×Ö·û´®µÄËùÓÐ×Ö·ûÆ¥ÅäÕû¸öÄ£Ê½¡£ÀýÈç£¬×Ö·û´®"aaa"ÓëÄ£Ê½"a.a"
-// ºÍ"ab*ac*a"Æ¥Åä£¬µ«Óë"aa.a"¼°"ab*a"¾ù²»Æ¥Åä¡£
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½19ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½Æ¥ï¿½ï¿½
+// ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½'.'ï¿½ï¿½'*'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Ä£Ê½ï¿½Ðµï¿½ï¿½Ö·ï¿½'.'
+// ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½'*'ï¿½ï¿½Ê¾ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ô³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î£ï¿½ï¿½ï¿½0ï¿½Î£ï¿½ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½
+// ï¿½Ð£ï¿½Æ¥ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ç£¬ï¿½Ö·ï¿½ï¿½ï¿½"aaa"ï¿½ï¿½Ä£Ê½"a.a"
+// ï¿½ï¿½"ab*ac*a"Æ¥ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½"aa.a"ï¿½ï¿½"ab*a"ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ä¡£
 
 #pragma once
 #include <cstdio>
@@ -19,10 +19,10 @@ class _19_RegularExpressionsMatching
 
     bool matchCore(const char* str, const char* pattern)
     {
-
+        return false;
     }
 
-    // ====================²âÊÔ´úÂë====================
+    // ====================ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½====================
     void Test(const char* testName, const char* string, const char* pattern, bool expected)
     {
         if (testName != nullptr)

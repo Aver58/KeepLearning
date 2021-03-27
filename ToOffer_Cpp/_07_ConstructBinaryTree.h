@@ -32,8 +32,8 @@ class _07_ConstructBinaryTree
         {
             if (startInorder == endInorder && *startPreorder == *startInorder)
                 return root;
-            else
-                throw std::exception("Invalid input.");
+            // else
+            //     throw std::exception("Invalid input.");
         }
     
         // 在中序遍历中找到根结点的值
@@ -42,9 +42,13 @@ class _07_ConstructBinaryTree
             ++rootInorder;
     
         if (rootInorder == endInorder && *rootInorder != rootValue)
-            throw std::exception("Invalid input.");
+        {
+            printf("Invalid input.");
+            // throw std::exception("Invalid input.");
+            return nullptr;
+        }
     
-        int leftLength = rootInorder - startInorder;
+        auto leftLength = rootInorder - startInorder;
         int* leftPreorderEnd = startPreorder + leftLength;
     
         if (leftLength > 0)
