@@ -69,12 +69,20 @@ void TestGoto() {
     } while (a < 20);
 }
 
+void TestForeach(){
+    for (int i = 0; i < 3; i++)
+    {
+        cout<<i;continue;
+        cout<<"222";break;
+        for (int i = 0; i < 3; i++)
+        {
+            cout<<"333";
+        }
+    }
+}
+
 int main()
 {
     std::cout << "Hello World! \n";
-	// BubbleSort0();
-
-    TestTime();
-
-    std::cout << "Hello World! \n";
+    TestForeach();
 }
