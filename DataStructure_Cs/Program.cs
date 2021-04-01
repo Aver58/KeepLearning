@@ -10,8 +10,16 @@
 #endregion
 
 using System;
+using System.IO;
 using System.Threading.Tasks;
 
+class Template<T>
+{
+    bool IsEquals(T a,T b)
+    {
+        return a.Equals(b);
+    }
+}
 public class Program
 {
     public static async Task Method1()
@@ -32,7 +40,7 @@ public class Program
             Console.WriteLine("Method2 :"+ i.ToString());
         }
     }
- 
+
     static void Main(string[] args)
     {
         //MyNamespace.List<int>.main();
@@ -41,7 +49,9 @@ public class Program
         //Method1();
         //Method2();
         //TestUnsafe();
-      
+        using(FileStream fs = new FileStream("File.txt",FileMode.Open))
+        {
+        }
         Console.ReadLine();
     }
 
