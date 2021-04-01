@@ -1,7 +1,7 @@
 #pragma once
 #include <string.h>
 #include <stdio.h>
-//ÌâÄ¿£ºÈçÏÂÎªÀàĞÍCMyStringµÄÉùÃ÷£¬ÇëÎª¸ÃÀàĞÍÌí¼Ó¸³ÖµÔËËã·ûº¯Êı¡£
+//é¢˜ç›®ï¼šå¦‚ä¸‹ä¸ºç±»å‹CMyStringçš„å£°æ˜ï¼Œè¯·ä¸ºè¯¥ç±»å‹æ·»åŠ èµ‹å€¼è¿ç®—ç¬¦å‡½æ•°ã€‚
 class CMyString
 {
 public:
@@ -17,7 +17,7 @@ private:
 
 CMyString::CMyString(char* pData)
 {
-    if (pData == nullptr)  // ÅĞ¶ÏÊÇ·ñÎª¿ÕÖ¸Õë
+    if (pData == nullptr)  // åˆ¤æ–­æ˜¯å¦ä¸ºç©ºæŒ‡é’ˆ
     {
         m_pData = new char[1];
         m_pData[0] = '\0';
@@ -43,17 +43,17 @@ CMyString::~CMyString()
 }
 
 /*
-// ³õ¼¶×ö·¨£¬Î´¿¼ÂÇÄÚ´æ²»×ãÊ±µÄÒì³£°²È«ĞÔ
+// åˆçº§åšæ³•ï¼Œæœªè€ƒè™‘å†…å­˜ä¸è¶³æ—¶çš„å¼‚å¸¸å®‰å…¨æ€§
 CMyString& CMyString::operator=(const CMystring& str)
 {
-    // ÅĞ¶ÏÊÇ·ñÎª×ÔÉí
+    // åˆ¤æ–­æ˜¯å¦ä¸ºè‡ªèº«
     if(this == &str)
         return *this;
 
-    // ¸³ÖµÇ°ÏÈÉ¾³ıÔ­ÓĞÄÚÈİ
+    // èµ‹å€¼å‰å…ˆåˆ é™¤åŸæœ‰å†…å®¹
     delete []m_pData;
     m_pData = nullptr;
-    // ×¢Òâ£ºÕâÀïÈç¹ûÄÚ´æ²»×ã£¬µ«ÊÇÓÖÒÑ¾­°Ñm_pDataÖÃÎª¿ÕÁË£¬·µ»ØµÄ¾ÍÊÇ¸ö¿ÕÖ¸Õë
+    // æ³¨æ„ï¼šè¿™é‡Œå¦‚æœå†…å­˜ä¸è¶³ï¼Œä½†æ˜¯åˆå·²ç»æŠŠm_pDataç½®ä¸ºç©ºäº†ï¼Œè¿”å›çš„å°±æ˜¯ä¸ªç©ºæŒ‡é’ˆ
     m_pData = new char[strlen(str.m_pData) + 1];
     strcpy(m_pData, str.m_pData);
 
@@ -61,15 +61,15 @@ CMyString& CMyString::operator=(const CMystring& str)
 }
 */
 
-// ¸ß¼¶×ö·¨ A = B
+// é«˜çº§åšæ³• A = B
 CMyString& CMyString::operator=(const CMyString& str)
 {
     if (this != &str)
     {
-        // ´´½¨ÁÙÊ±ÊµÀı£¬Ïàµ±ÓÚ°ÑÒª¸³ÖµµÄÄÚÈİÒ²´«ÈëÁËÁÙÊ±±äÁ¿£¡
+        // åˆ›å»ºä¸´æ—¶å®ä¾‹ï¼Œç›¸å½“äºæŠŠè¦èµ‹å€¼çš„å†…å®¹ä¹Ÿä¼ å…¥äº†ä¸´æ—¶å˜é‡ï¼
         CMyString strTemp(str);
 
-        // È»ºó½»»»Ö¸Ïò£¬ĞÂ»»¾É£¬¾É»»ĞÂ, Íê³É¸³Öµ¡£¡¾±£Ö¤ÄÚ´æ²»×ãÊ±£¬²»ĞŞ¸ÄÔ´ÊµÀı¡¿
+        // ç„¶åäº¤æ¢æŒ‡å‘ï¼Œæ–°æ¢æ—§ï¼Œæ—§æ¢æ–°, å®Œæˆèµ‹å€¼ã€‚ã€ä¿è¯å†…å­˜ä¸è¶³æ—¶ï¼Œä¸ä¿®æ”¹æºå®ä¾‹ã€‘
         char* pTemp = strTemp.m_pData;
         strTemp.m_pData = m_pData;
         m_pData = pTemp;

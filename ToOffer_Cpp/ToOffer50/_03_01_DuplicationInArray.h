@@ -4,12 +4,12 @@ using namespace std;
 
 class _03_01_DuplicationInArray
 {
-// ÃæÊÔÌâ3£¨Ò»£©£ºÕÒ³öÊý×éÖÐÖØ¸´µÄÊý×Ö
-//	ÌâÄ¿£ºÔÚÒ»¸ö³¤¶ÈÎªnµÄÊý×éÀïµÄËùÓÐÊý×Ö¶¼ÔÚ0µ½n-1µÄ·¶Î§ÄÚ¡£
-//	Êý×éÖÐÄ³Ð©Êý×ÖÊÇÖØ¸´µÄ£¬µ«²»ÖªµÀÓÐ¼¸¸öÊý×ÖÖØ¸´ÁË£¬
-//	Ò²²»ÖªµÀÃ¿¸öÊý×ÖÖØ¸´ÁË¼¸´Î¡£ÇëÕÒ³öÊý×éÖÐÈÎÒâÒ»¸öÖØ¸´µÄÊý×Ö¡£
-//	ÀýÈç£¬Èç¹ûÊäÈë³¤¶ÈÎª7µÄÊý×é{2, 3, 1, 0, 2, 5, 3}£¬
-//	ÄÇÃ´¶ÔÓ¦µÄÊä³öÊÇÖØ¸´µÄÊý×Ö2»òÕß3¡£
+// é¢è¯•é¢˜3ï¼ˆä¸€ï¼‰ï¼šæ‰¾å‡ºæ•°ç»„ä¸­é‡å¤çš„æ•°å­—
+//	é¢˜ç›®ï¼šåœ¨ä¸€ä¸ªé•¿åº¦ä¸ºnçš„æ•°ç»„é‡Œçš„æ‰€æœ‰æ•°å­—éƒ½åœ¨0åˆ°n-1çš„èŒƒå›´å†…ã€‚
+//	æ•°ç»„ä¸­æŸäº›æ•°å­—æ˜¯é‡å¤çš„ï¼Œä½†ä¸çŸ¥é“æœ‰å‡ ä¸ªæ•°å­—é‡å¤äº†ï¼Œ
+//	ä¹Ÿä¸çŸ¥é“æ¯ä¸ªæ•°å­—é‡å¤äº†å‡ æ¬¡ã€‚è¯·æ‰¾å‡ºæ•°ç»„ä¸­ä»»æ„ä¸€ä¸ªé‡å¤çš„æ•°å­—ã€‚
+//	ä¾‹å¦‚ï¼Œå¦‚æžœè¾“å…¥é•¿åº¦ä¸º7çš„æ•°ç»„{2, 3, 1, 0, 2, 5, 3}ï¼Œ
+//	é‚£ä¹ˆå¯¹åº”çš„è¾“å‡ºæ˜¯é‡å¤çš„æ•°å­—2æˆ–è€…3ã€‚
 public:
 	void Test() {
 		int numbers[] = { 2, 3, 1, 0, 2, 5, 3 };
@@ -19,9 +19,9 @@ public:
 	}
 	bool duplicate(int numbers[], int length, int* duplication)
 	{
-		//1. ÅÅÐò
+		//1. æŽ’åº
 		//2. map
-		//3. ÏÂ±ê,Èç¹û¿ÉÒÔ¸ÄÊý×éµÄ»°£¬¡¾ËùÓÐÊý×Ö¶¼ÔÚ0µ½n-1µÄ·¶Î§ÄÚ¡¿°ÑÊý×ÖÈû»ØÖ¸¶¨ÏÂ±ê¡£
+		//3. ä¸‹æ ‡,å¦‚æžœå¯ä»¥æ”¹æ•°ç»„çš„è¯ï¼Œã€æ‰€æœ‰æ•°å­—éƒ½åœ¨0åˆ°n-1çš„èŒƒå›´å†…ã€‘æŠŠæ•°å­—å¡žå›žæŒ‡å®šä¸‹æ ‡ã€‚
 		if (length <= 0|| numbers== nullptr)
 			return;
 
@@ -41,7 +41,7 @@ public:
 					*duplication = num;
 					return false;
 				}
-				// ½»»»Î»ÖÃ
+				// äº¤æ¢ä½ç½®
 				int temp = numbers[num];
 				numbers[num] = num;
 				numbers[i] = temp;

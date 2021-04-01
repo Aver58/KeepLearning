@@ -1,7 +1,15 @@
-#include "_14_OrderOddNumberFirst.h"
+#include <iostream>
+using namespace std;
 #include "Swap.h"
 
-OrderOddNumberFirst::OrderOddNumberFirst(){}
+class OrderOddNumberFirst
+{
+    public:
+        OrderOddNumberFirst();
+        void ReOrder(int*,int n,bool (*func)(int));
+
+};
+
 // 输入整形数组，实现奇数在前，偶数在后
 void OrderOddNumberFirst::ReOrder(int *pData, int length,bool (*func)(int))
 {

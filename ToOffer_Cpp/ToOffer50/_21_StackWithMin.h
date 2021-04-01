@@ -1,3 +1,20 @@
+#include<stack>
+#include <iostream>
+using namespace std;
+
+class StackWithMin
+{
+    public:
+        StackWithMin();
+        void Push(int value);
+        void Pop();
+        int Min();
+    
+    private:
+        stack<int> m_DataStack;
+        stack<int> m_MinStack;
+};
+
 //#include "_21_Stack.h"
 //
 //// 思路：用辅助栈来存放最小值，每压入一个值，判断是否比辅助栈的栈顶元素小，

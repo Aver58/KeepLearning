@@ -1,4 +1,12 @@
-#include "_20_PrintMatrix.h"
+#include <iostream>
+using namespace std;
+
+class PrintMatrix
+{
+    public:
+        PrintMatrix(){};
+        void PrintMaxtrixClockwisely(int**,int,int);
+};
 
 void PrintMaxtrixInCircle(int** array, int row, int colum, int start)
 {

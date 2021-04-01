@@ -1,7 +1,7 @@
 #pragma once
 
 #include <stack>
-#include "Utilities/List.h"
+#include "List.h"
 
 class _06_PrintListInReversedOrder
 {

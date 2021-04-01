@@ -1,3 +1,16 @@
+#include <iostream>
+#include "../LeetCode_Cpp/Global.h"
+using namespace std;
+
+class ChainList
+{
+    public:
+        ChainList(){};
+        ListNode* ReverseList(ListNode*);
+        ListNode* FindKthInTaik(ListNode*,int);
+        ListNode* MergeOrderedList(ListNode*,ListNode*);
+};
+
 //#include "_15_ChainList.h"
 //
 //// 输入一个链表，输出链表的倒数第K个节点
