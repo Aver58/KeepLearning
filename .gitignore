@@ -10,3 +10,6 @@ ToOffer_Cs/ToOffer_Cs/bin/
 ToOffer_Cs/ToOffer_Cs/obj/
 Debug/
 .vscode/
+*.exe
+build
+.vscode/

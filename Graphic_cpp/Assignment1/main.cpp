@@ -1,8 +1,8 @@
 #include "Triangle.hpp"
 #include "rasterizer.hpp"
-#include <eigen3/Eigen/Eigen>
+#include <Eigen/Eigen>
 #include <iostream>
-#include <opencv2/opencv.hpp>
+#include <opencv.hpp>
 using namespace std;
 
 constexpr double MY_PI = 3.1415926;
@@ -96,8 +96,9 @@ int main(int argc, const char** argv)
             return 0;
     }
 
-    cout<<"111";
-    // rst::rasterizer r(700, 700);
+    cout<<111;
+
+    rst::rasterizer r(700, 700);
 
     // Eigen::Vector3f eye_pos = {0, 0, 5};
 
@@ -110,7 +111,6 @@ int main(int argc, const char** argv)
 
     // int key = 0;
     // int frame_count = 0;
-
     // if (command_line) {
     //     r.clear(rst::Buffers::Color | rst::Buffers::Depth);
 
