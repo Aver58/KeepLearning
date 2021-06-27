@@ -44,9 +44,8 @@ namespace DeepInCSharp.第二章_C1搭建的核心基础
         {
             Console.WriteLine("{0} says:{1}", name, message + "Say2");
         }
-
-       
     }
+
     class Background
     {
         public static void Note(string note) //2.必须有一个方法包含了要执行的代码
@@ -54,6 +53,7 @@ namespace DeepInCSharp.第二章_C1搭建的核心基础
             Console.WriteLine("({0})--BG", note);
         }
     }
+
     class SimpleDelegateTest
     {
         [STAThread]
@@ -63,12 +63,14 @@ namespace DeepInCSharp.第二章_C1搭建的核心基础
             Person jon = new Person("Jon");
             Person tom = new Person("Tom");
             StringProcessor jonsVoice, tomsVoice, background;
-            jonsVoice = new StringProcessor(jon.Say);//3.必须创建一个委托实例
+            //3.必须创建一个委托实例
+            jonsVoice = new StringProcessor(jon.Say);
             jonsVoice += jon.Say2;//合并委托、订阅委托
             jonsVoice -= jon.Say2;//移除委托、取消委托
             tomsVoice = new StringProcessor(tom.Say);
             background = new StringProcessor(Background.Note);
-            jonsVoice("Hello");//4.必须调用委托实例
+            //4.必须调用委托实例
+            jonsVoice("Hello");
             tomsVoice("there");
             tomsVoice.Invoke("there2");
             background("I'm BG");
@@ -76,5 +78,4 @@ namespace DeepInCSharp.第二章_C1搭建的核心基础
             Console.ReadLine();
         }
     }
-    
 }

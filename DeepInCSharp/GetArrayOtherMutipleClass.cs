@@ -18,8 +18,6 @@ namespace Algorithm
         /// <summary>
         /// 先写个n平方算法
         /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
         public static int[] ArrayExceptSelfNN(int[] input)
         {
             if (input == null)
@@ -44,19 +42,12 @@ namespace Algorithm
         }
 
         //分析：
-
         //1、如果数组中有两个及以上的0，那么结果数组的每一项都为0.
-
         //2、如果数组中只有一个0，那么结果数组中，0对应的位置，为数组中其他元素的成绩，其余位置都为0。
-
         //3、如果数组中没有0，那么结果数组每一项均为数组所有元素的乘积/当前数组元素。
-
         //需要扫描数组两次，算法时间复杂度为O（n）：
-
         //第一次：计算0的个数，以及非0元素的乘积。
-
         //第二次，计算结果数组每一位的元素。
-
         //左边 * 右边
         public static int[] ArrayExceptSelf2N(int[] input)
         {
