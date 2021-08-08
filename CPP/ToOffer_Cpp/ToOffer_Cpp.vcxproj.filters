@@ -16,8 +16,8 @@
     <Filter Include="头文件\Utilities">
       <UniqueIdentifier>{daaca3a2-8be4-4e2b-90f6-3227a85a166d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Sort">
-      <UniqueIdentifier>{3f68ee93-ecd6-4eb4-aae4-15920fe7251a}</UniqueIdentifier>
+    <Filter Include="头文件\Test">
+      <UniqueIdentifier>{90260cb7-1776-4e6a-94d9-93cd073205c7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -42,10 +42,16 @@
     <ClCompile Include="_28_StringPermutation.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
+    <ClCompile Include="Utilities\BinaryTree.cpp">
+      <Filter>头文件\Utilities</Filter>
+    </ClCompile>
     <ClCompile Include="Utilities\List.cpp">
       <Filter>头文件\Utilities</Filter>
     </ClCompile>
-    <ClCompile Include="Utilities\BinaryTree.cpp">
+    <ClCompile Include="Utilities\QuadTree.cpp">
+      <Filter>头文件\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Test.cpp">
       <Filter>头文件\Utilities</Filter>
     </ClCompile>
   </ItemGroup>
@@ -70,15 +76,6 @@
     </ClInclude>
     <ClInclude Include="_01_AssignmentOperator.h">
       <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Utilities\BinaryTree.h">
-      <Filter>头文件\Utilities</Filter>
-    </ClInclude>
-    <ClInclude Include="..\LeetCode_Cpp\Global.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Utilities\List.h">
-      <Filter>头文件\Utilities</Filter>
     </ClInclude>
     <ClInclude Include="_07_ConstructBinaryTree.h">
       <Filter>头文件</Filter>
@@ -176,9 +173,6 @@
     <ClInclude Include="_31_StackPushPopOrder.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="LineIntersection.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="_32_PrintTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -194,14 +188,32 @@
     <ClInclude Include="_36_ConvertBinarySearchTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Sort\BubbleSort.h">
-      <Filter>头文件\Sort</Filter>
+    <ClInclude Include="Utilities\BinaryTree.h">
+      <Filter>头文件\Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="Sort\SortBase.h">
-      <Filter>头文件\Sort</Filter>
+    <ClInclude Include="Utilities\List.h">
+      <Filter>头文件\Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="..\LeetCode_Cpp\SortFunc.h">
-      <Filter>头文件\Sort</Filter>
+    <ClInclude Include="Utilities\QuadTree.h">
+      <Filter>头文件\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TestClass.h">
+      <Filter>头文件\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TestForeach.h">
+      <Filter>头文件\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TestGoto.h">
+      <Filter>头文件\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TestReference.h">
+      <Filter>头文件\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TestTime.h">
+      <Filter>头文件\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\LineIntersection.h">
+      <Filter>头文件\Test</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

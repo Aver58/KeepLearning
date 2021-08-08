@@ -1,4 +1,4 @@
-#include "Global.h"
+#include "..\Global.h"
 
 /// 交换数组两个值
 void Swap(int array[], int i, int j)

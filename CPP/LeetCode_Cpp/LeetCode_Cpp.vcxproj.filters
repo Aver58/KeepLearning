@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\Sort">
+      <UniqueIdentifier>{c3ca3728-35b5-49bb-bd7f-24e0ac01f7e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -43,9 +46,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="_34_Find_First_and_Last_Position_of_Element_in_Sorted_Array.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="SortFunc.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="_278_First_Bad_Version.h">
@@ -155,6 +155,15 @@
     </ClInclude>
     <ClInclude Include="_204_Count_Primes.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\BubbleSort.h">
+      <Filter>头文件\Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\SortBase.h">
+      <Filter>头文件\Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\SortFunc.h">
+      <Filter>头文件\Sort</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

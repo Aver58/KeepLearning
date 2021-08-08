@@ -154,6 +154,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Sort\BubbleSort.h" />
+    <ClInclude Include="Sort\SortBase.h" />
+    <ClInclude Include="Sort\SortFunc.h" />
     <ClInclude Include="unity_test.h" />
     <ClInclude Include="_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.h" />
     <ClInclude Include="_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.h" />
@@ -177,7 +180,6 @@
     <ClInclude Include="Global.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="SortFunc.h" />
     <ClInclude Include="_234_PalindromeLinkedList.h" />
     <ClInclude Include="_278_First_Bad_Version.h" />
     <ClInclude Include="_283_MoveZeroes.h" />

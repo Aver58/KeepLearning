@@ -32,7 +32,7 @@
 // #include "_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.h"
 // #include "_652_Find_Duplicate_Subtrees.h"
 // #include "_204_Count_Primes.h"
-// #include "SortFunc.h"
+ #include "SortFunc.h"
 #include "_344_Reverse_String.h"
 
 
@@ -40,7 +40,8 @@ int main()
 {
     std::cout << "Hello World!\n"; 
 	
-	_344_Reverse_String().Test();
+	//_344_Reverse_String().Test();
+	SortTest();
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

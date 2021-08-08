@@ -198,11 +198,38 @@ void BucketSort(int nums[], int len) {
 	}
 }
 
+//7. 希尔排序
+void ShellSort(int nums[], int len) {
+	int d = len;
+	while (d > 1)
+	{
+		// 分组跨度：逐步折半
+		d = d / 2;
+		for (int x = 0; x < d; x++)
+		{
+			// 对每组元素进行排序。任何一种排序都可以，这边用插入排序
+			for (int i = x + d; i < len; i+=d)
+			{
+				int temp = nums[i];
+				int j = i - d;
+				while (temp < nums[j] && j >= 0)
+				{
+					nums[j + d] = nums[j];
+					j-=d;
+				}
+				nums[j + d] = temp;
+			}
+		}
+	}
+}
+
 static void SortTest() {
 	int head[8] = {2,3,4,6,8,7,0,1};
 	//vector<int> head1 = vector<int>{ 2,3,4,5,8,7,0};
-	MergeSort(head,0,7);
+	//MergeSort(head,0,7);
 	//BucketSort(head,8);
+	ShellSort(head,8);
+
 	int* head2 = head;
 
 	//merge_sort(head,6);

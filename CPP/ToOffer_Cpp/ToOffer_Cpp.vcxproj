@@ -151,6 +151,8 @@
     <ClCompile Include="ToOffer_Cpp.cpp" />
     <ClCompile Include="Utilities\BinaryTree.cpp" />
     <ClCompile Include="Utilities\List.cpp" />
+    <ClCompile Include="Utilities\QuadTree.cpp" />
+    <ClCompile Include="Utilities\Test.cpp" />
     <ClCompile Include="_14_OrderOddNumberFirst.cpp" />
     <ClCompile Include="_15_ChainList.cpp" />
     <ClCompile Include="_20_PrintMatrix.cpp" />
@@ -159,15 +161,17 @@
     <ClCompile Include="_28_StringPermutation.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\LeetCode_Cpp\Global.h" />
-    <ClInclude Include="..\LeetCode_Cpp\SortFunc.h" />
     <ClInclude Include="FirstClass_Student.h" />
-    <ClInclude Include="LineIntersection.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="Sort\BubbleSort.h" />
-    <ClInclude Include="Sort\SortBase.h" />
+    <ClInclude Include="Test\LineIntersection.h" />
+    <ClInclude Include="Test\TestClass.h" />
+    <ClInclude Include="Test\TestForeach.h" />
+    <ClInclude Include="Test\TestGoto.h" />
+    <ClInclude Include="Test\TestReference.h" />
+    <ClInclude Include="Test\TestTime.h" />
     <ClInclude Include="Utilities\BinaryTree.h" />
     <ClInclude Include="Utilities\List.h" />
+    <ClInclude Include="Utilities\QuadTree.h" />
     <ClInclude Include="_02_Singleton.h" />
     <ClInclude Include="_03_01_DuplicationInArray.h" />
     <ClInclude Include="_03_02_DuplicationInArrayNoEdit.h" />
